@@ -1,0 +1,59 @@
+name: Business test
+description: Define a decision-oriented Athena customer or market experiment.
+title: "[Test] "
+labels:
+  - experiment
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Define the decision and evidence threshold before running the test.
+  - type: input
+    id: decision
+    attributes:
+      label: Decision this test can change
+      placeholder: We will choose whether to...
+    validations:
+      required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Testable hypothesis
+      placeholder: We believe that...
+    validations:
+      required: true
+  - type: textarea
+    id: participants
+    attributes:
+      label: Participant and context
+      placeholder: Who will participate, and in what real or synthetic context?
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Method and evidence captured
+      placeholder: Describe the task, observation method, and raw evidence location.
+    validations:
+      required: true
+  - type: textarea
+    id: gates
+    attributes:
+      label: Continue, change, and stop criteria
+      placeholder: |
+        Continue if:
+        Change if:
+        Stop if:
+    validations:
+      required: true
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Evidence boundaries
+      options:
+        - label: This test does not imply buyer demand unless a buyer participates.
+          required: true
+        - label: Synthetic or self-reported behavior will be labeled as such.
+          required: true
+        - label: Human academic judgment remains outside automated product decisions.
+          required: true

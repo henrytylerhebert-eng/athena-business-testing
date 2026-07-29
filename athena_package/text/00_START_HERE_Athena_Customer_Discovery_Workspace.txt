@@ -1,0 +1,71 @@
+Athena Customer Discovery Workspace
+
+A guided research package for Grant Dozier
+
+Purpose:  This package is designed to help Grant inspect the reasoning, challenge assumptions, compare customer options, and decide what to test next. It is not a final verdict on his product.
+
+How to use this package
+
+5-minute path: Read the Current Readout and the Customer Options table.
+
+30-minute path: Follow the Research Journey from original thesis to current hypotheses.
+
+Deep-review path: Open the source library and evidence register to inspect the underlying material.
+
+Working-session path: Use the decision prompts at the end to compare options with Grant in real time.
+
+Current readout
+
+The strongest current hypothesis is not “build a comprehensive advising platform.” It is to test whether a radically simplified, student-centered view of position, next actions, deadlines, and blockers improves decision clarity and action completion.
+
+[Inference] The most evidence-supported first institutional test is a narrowly defined transfer-student advising use case at UL Lafayette, especially first-semester transfer students with 30–60 accepted credits and unresolved transfer-credit applicability questions.
+
+[Unverified] A lighter-weight recruiter or community-college pathway experience may offer a faster path to desirability testing, but that option has not been validated to the same depth as the UL Lafayette advising use case.
+
+What is supported vs. what is still open
+
+Category | Current status | Meaning
+
+Problem | Supported | Students face fragmented systems, cognitive overload, unclear next actions, and reactive blockers.
+
+Initial segment | Supported with narrowing | Transfer students show high pain; UL Lafayette work narrows the cohort to 30–60 credits with unresolved equivalencies.
+
+Product shape | Supported as a test hypothesis | Position + Next Three Moves + Blockers is the smallest useful experience identified.
+
+Institutional integration | Partially supported | A concierge or secure-extract pilot appears feasible; live API integration is unnecessary for the first test.
+
+Buyer/GTM | Open | Departmental, student-success, recruiter, and community-college entry points remain options to compare.
+
+Demand | Unverified | Direct student, recruiter, advisor, and institutional interviews are still required.
+
+Workspace map
+
+00 START HERE — https://drive.google.com/drive/folders/1jIMu5t5hdg8AoHJw-Ig33jT1jAyduU_w
+
+01 ORIGINAL PRODUCT THESIS — https://drive.google.com/drive/folders/1X-23T6FeTGKu0P9ymwMu3P6V1BskBuZ0
+
+02 RESEARCH JOURNEY — https://drive.google.com/drive/folders/1dHXDmYQ_-7PU5d2MvW-91L4zgQuyjjus
+
+03 CUSTOMER OPTIONS — https://drive.google.com/drive/folders/1aGGBoSDf7p-B6klytaJwi5Ae7fzYeuUP
+
+04 UL LAFAYETTE VALIDATION — https://drive.google.com/drive/folders/1vT50l0UFHKjS7NIMy34ZZpJjlqcKM07p
+
+05 PRODUCT AND PILOT — https://drive.google.com/drive/folders/1d_33NqvvgvEXjSSLnO-_zEuUvbSNi2zn
+
+06 EVIDENCE REGISTER — https://drive.google.com/drive/folders/1sVKT8YBYsoFODGVpErBXaj3VuaiqiHnO
+
+07 SOURCE LIBRARY — https://drive.google.com/drive/folders/1ULAH49cmJQm9fxyrk2H_MYNizGjX0SbM
+
+99 ARCHIVE — https://drive.google.com/drive/folders/1HuQQGQHEEPbodSjtYfdGWR8qlXlLfyOa
+
+Decision prompts for Grant
+
+Which customer problem feels most central to Athena—not merely easiest to test?
+
+Which user should receive value first: student, recruiter, advisor, or institutional operator?
+
+Which test can produce credible evidence without requiring institutional integration?
+
+What outcome would make Grant change the product direction?
+
+What constraints are non-negotiable for the product vision?

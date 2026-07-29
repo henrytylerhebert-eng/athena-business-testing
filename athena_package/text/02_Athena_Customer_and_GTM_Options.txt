@@ -1,0 +1,39 @@
+Athena Customer and Go-to-Market Options
+
+Digestible choices for founder discussion
+
+These options are not mutually exclusive forever. The decision is which learning loop to run first.
+
+Option | First user | Value proposition | Why consider it | Primary risk | Current view
+
+A. UL Lafayette transfer advising pilot | First-semester transfer students, 30–60 credits, unresolved equivalencies | Student clarity + advisor preparation + institutional retention value | Deepest research base; measurable within a registration window | Institutional access, governance, data latency, slow sponsorship | Highest evidence / moderate speed
+
+B. Community-college pathway bridge | Prospective or transferring community-college students | Understand transferability, applicability, next steps, and destination options | Clear transition pain; potentially strong regional ecosystem fit | Requires partner alignment and articulation accuracy | Promising / under-researched
+
+C. University recruiter field tool | Prospective students interacting with recruiters | Collect lightweight student context and return a useful, institution-informed next-step plan | Fast desirability testing; low integration; recruiter-led distribution | May drift toward enrollment CRM or lead capture rather than student agency | Fastest test / least validated
+
+D. Direct-to-student decision-clarity prototype | Students with a fictional or self-entered scenario | Position + next moves + blockers without institutional integration | Tests the core UX cleanly and cheaply | Weak evidence of willingness to pay and institutional workflow fit | Best UX test / weak GTM proof
+
+Recommended sequencing
+
+Run a lightweight, non-integrated desirability test across Options B and C to learn language, urgency, and workflow demand.
+
+In parallel, retain Option A as the strongest decision-grade institutional pilot hypothesis because it has the clearest evidence chain and measurable outcomes.
+
+Use Option D as the common prototype layer so the same core interface can be tested across contexts.
+
+Do not build live SIS integrations until the simplified experience demonstrates behavioral value and an institutional sponsor confirms the workflow.
+
+Decision criteria
+
+Criterion | Question
+
+Founder fit | Which customer and problem most clearly express Grant’s long-term product thesis?
+
+Learning speed | Which test can run with the fewest dependencies?
+
+Evidence quality | Will the result change a product or GTM decision?
+
+Measurable value | Can the test connect to a concrete action, time savings, enrollment, retention, or credit applicability outcome?
+
+Expansion path | Does the initial workflow create a credible path to broader institutional value?

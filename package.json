@@ -1,0 +1,9 @@
+{
+  "name": "athena-business-testing",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Athena research portal and business-testing workspace",
+  "scripts": {
+    "test": "node scripts/validate-site.mjs"
+  }
+}

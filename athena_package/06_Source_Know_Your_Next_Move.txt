@@ -1,0 +1,238 @@
+Know Your Next Move: Reconstructing the Student Advising Problem and Designing the Smallest Test of a Student-Empowered Advising Platform
+Deliverable 1: Executive Summary
+The contemporary higher education landscape in the United States presents students with an administratively dense, highly fragmented, and cognitively overwhelming digital ecosystem. Despite massive institutional investments in Student Information Systems (SIS), degree audit software, and predictive student success platforms, a fundamental gap remains. The core student advising problem is that students routinely lack a clear, continuous, actionable, and student-centered understanding of their academic position, upcoming requirements, impending deadlines, and active blockers. Institution-reported results indicate that the overarching design of academic technology serves institutional compliance and auditing needs rather than fostering student decision-making. [1][2]
+This comprehensive research report investigates the hypothesis that when students receive a simple, student-centered view of their current position, next actions, important deadlines, and unresolved blockers, they can make academic decisions faster, more accurately, and with less dependency on manual advisor interpretation. The analysis supports and narrows this hypothesis. Peer-reviewed evidence in behavioral economics demonstrates that while low-touch informational nudges are cost-effective, they are frequently insufficient to drive long-term behavioral change if the underlying administrative processes remain opaque or require high cognitive load. Therefore, the student-empowerment hypothesis is supported only if the proposed interface radically constrains information to actionable next steps rather than serving as a passive data repository. [1][2]
+The population that experiences this friction most acutely is the transfer student demographic. While student athletes face immense regulatory complexity, government or authoritative data confirms that transfer students represent the strongest first user segment due to an average 43% credit loss upon transferring, severe financial consequences, and an urgent need for translational clarity. The smallest useful product to test this hypothesis is a highly constrained, non-integrated "concierge" prototype displaying only three domains: a student's current position, their next three academic moves, and active blockers. [1][2]
+The most important risks involve institutional procurement hurdles, stringent data privacy regulations (FERPA), and the potential for advisor resistance stemming from data accuracy concerns and role displacement fears. Consequently, the recommended first experiment is a before-and-after usability test utilizing manually assembled data, intentionally bypassing complex institutional integration to strictly test the user interface's impact on cognitive load and decision accuracy. The final recommendation is to proceed with this highly targeted, non-integrated test to validate whether a simplified visual framework inherently empowers independent academic action before exploring broader business models.
+Deliverable 2: Student Pain-Point Map
+To evaluate where the advising process breaks down between initial enrollment and successful academic navigation, recurring student-advising problems must be meticulously categorized, measured, and ranked. The following map evaluates these pain points based on their frequency, severity, consequence, and suitability for software intervention.
+Pain Point Category
+Specific Student Problem
+Frequency
+Severity & Consequence
+Suitability for Software Intervention
+Primary Source of Friction
+Transfer Credit Loss
+Uncertainty over which prior credits apply to the specific major versus general electives.
+Very High
+Severe: 43% average credit loss; severe financial drain and delayed graduation.
+Medium: Software can display gaps, but institutional articulation policies ultimately govern outcomes.
+Policy-driven / Informational
+Credit & Degree Audit Confusion
+Difficulty interpreting complex degree audits (e.g., DegreeWorks) to determine remaining requirements.
+Very High
+High: Excess credit accumulation; wasted tuition.
+High: Requires translation of institutional jargon into plain language.
+Informational / Technical
+Financial Aid & SAP Risks
+Unknowingly approaching the 150% maximum timeframe for Satisfactory Academic Progress (SAP) or state excess credit surcharges.
+Medium
+Severe: Sudden loss of federal/state financial aid; forced academic stop-out.
+High: Simple progress bars and alerts can prevent catastrophic blind spots.
+Informational / Procedural
+Academic Holds & Blockers
+Discovering an administrative, financial, or advising hold reactively at the exact moment of course registration.
+High
+High: Missed registration windows; inability to secure required sequenced courses.
+High: Proactive surfacing of blockers with direct links to resolution pathways.
+Procedural / Technical
+Unclear Ownership of Help
+Not knowing whether to contact a faculty advisor, professional advisor, financial aid office, or the registrar.
+High
+Medium: Student frustration; administrative rework; repetitive support contacts.
+High: Smart routing or localized directories based on the specific blocker.
+Informational
+Registration Errors
+Missing prerequisites or enrolling in courses that do not fulfill specific degree progression requirements.
+High
+Medium: Wasted time; schedule rearrangement; delayed sequencing.
+High: Software can validate intended actions against degree maps.
+Technical / Behavioral
+Major Changes & Career Tradeoffs
+Deciding whether changing a major will delay graduation and require additional funding.
+Medium
+High: Added semesters; increased debt load.
+Low: Requires professional advising judgment and developmental counseling.
+Professional / Behavioral
+
+Independently observed results and industry estimates indicate that the pain points most suitable for immediate software intervention are those stemming from information discoverability and comprehension. For instance, the accumulation of excess credits is a massive systemic failure; government or authoritative data shows that associate degree recipients earn 30% more credits than required, and bachelor's recipients earn 12% more. In states like Florida and Texas, passing a specific credit threshold triggers an "Excess Credit Surcharge," doubling the tuition rate for remaining courses. Similarly, federal financial aid policies mandate that students complete their degree within a 150% maximum timeframe (e.g., attempting no more than 180 credits for a 120-credit degree) to maintain Satisfactory Academic Progress (SAP). Students frequently violate these thresholds due to simple informational opacity rather than academic failure. [1][2]
+Conversely, situations involving major life changes or academic probation require human intervention and should not be delegated entirely to software. Peer-reviewed evidence emphasizes that academic advising serves a critical social and psychological role, particularly for students facing complex emotional or developmental hurdles. [1][2]
+Deliverable 3: Current-State Journey Map
+The primary research question requires reconstructing the student advising journey to identify where the process breaks down. The current state requires a student to navigate a highly fragmented digital and administrative ecosystem to answer the simple question: "Am I on track, and what should I do next?"
+Phase 1: Information Gathering (The Fragmentation Phase)
+To determine their current position, a student must independently synthesize data across multiple disconnected platforms. The Student Information System (SIS) serves as the institutional database of record. However, institution-reported results and student-reported experiences confirm that legacy SIS platforms (e.g., Ellucian Banner, Colleague) feature notoriously difficult user interfaces and often rely on nightly batch processing rather than real-time API synchronization. Consequently, the data a student views may be outdated. The student must then cross-reference the SIS with a Degree Audit System (e.g., DegreeWorks). These audits function essentially as academic tax forms; they present a massive repository of institutional data, detailing every satisfied and unsatisfied requirement, but they fail to prioritize what the student should do next. The student is left to search through learning management systems, buried email newsletters, and decentralized department websites to cobble together a complete picture of their standing. [1][2]
+Phase 2: Analysis and Interpretation (The "Hidden Curriculum" Phase)
+Once the information is gathered, the student must translate institutional data into actionable decisions. Peer-reviewed evidence highlights that this phase is particularly destructive for first-generation and marginalized students due to the "hidden curriculum"—the unwritten academic norms, jargon, and implicit expectations that govern higher education. Terms such as "matriculation," "co-requisite," and "Satisfactory Academic Progress" create immediate comprehension barriers. A student may technically possess access to their degree audit (information availability) but entirely lack the domain knowledge to interpret it accurately (decision clarity). The student becomes paralyzed by choice, unable to prioritize which of their remaining requirements represents the most critical immediate action. [1][2]
+Phase 3: Advisor Intervention (The Dependency Phase)
+Unable to synthesize the data independently, the student schedules an advising appointment. This leads directly to a phenomenon identified in Workstream 3: avoidable advisor dependence. Advisor-reported experiences indicate that a vast majority of standard 30-minute advising sessions are consumed by manually reconstructing the student’s academic profile, interpreting the degree audit, and clearing routine registration holds. This transactional workload consumes the advisor’s professional capacity, preventing them from engaging in appropriate advisor dependence—which includes high-value developmental advising, career planning, and psychological support for students in crisis. The NACADA national survey reveals that median advisor-to-student ratios range from 1:375 to over 1:1200 at some institutions, making the current reliance on manual interpretation highly unsustainable. [1][2]
+Phase 4: Execution (The Blockage Phase)
+Following the advising appointment, the student attempts to execute the agreed-upon plan. They log into the registration portal but are unexpectedly stopped by a newly placed bursar hold, a prerequisite override requirement, or a filled course section. Unsure of who to contact, the student emails their advisor, creating a delayed, asynchronous communication loop. Friction is maximized here because unresolved blockers are discovered reactively at the point of action, rather than surfaced proactively.
+Deliverable 4: Segment Comparison
+Selecting the correct first-user segment is critical for designing the smallest valid test. The segment must experience high problem frequency and severity, while offering a clear pathway for measurable improvement.
+Segment
+Problem Frequency
+Problem Severity
+Complexity
+Assessment & Recommendation
+Student Athletes
+High
+Severe (Loss of NCAA eligibility)
+Extremely High
+Do Not Select.
+First-Year Students
+High
+Medium (Early confusion)
+Low
+Do Not Select.
+First-Generation Students
+Very High
+Severe (High stop-out risk)
+Medium
+Strong Candidate, but difficult to isolate.
+Transfer Students
+Very High
+Severe (Massive credit loss, financial drain)
+High
+Recommended First Segment.
+
+Analysis of the Student Athlete Segment
+The initial business context suggested student athletes as a potential early market due to their overlapping academic and eligibility responsibilities. However, rigorous analysis reveals this to be an unnecessarily narrow and highly specialized starting point. Government or authoritative data regarding the NCAA Academic Progress Rate (APR) demonstrates that student athletes are governed by strict eligibility metrics, including the 40-60-80 progress-toward-degree rules, which dictate the exact percentage of a degree that must be completed by specific academic years. Because the financial penalties for an institution dropping below the 930 APR threshold are severe (including postseason bans and loss of scholarships), universities surround student athletes with an intrusive, highly funded compliance and athletic advising infrastructure. Designing for this segment risks building a niche compliance-tracking tool for athletic administrators rather than a generalized empowerment tool for students. [1]
+Recommendation: Transfer Students
+The strongest segment for the first simple test is transfer students. Government or authoritative data from the U.S. Government Accountability Office (GAO) establishes that transfer students lose an average of 43% of their earned credits upon changing institutions, which equates to roughly a semester's worth of lost credits and thousands of dollars in wasted tuition. Transfer students face immediate, severe friction in understanding their new academic position. Crucially, transfer students already possess prior experience with higher education systems; their confusion stems directly from information design, misaligned articulation agreements, and institutional opacity rather than a general lack of college readiness. If the simplified student view can help a transfer student quickly understand how their disparate credits apply to their new degree path, the tool's core value proposition is definitively proven. [1]
+Deliverable 5: Competitive Landscape
+The higher education technology market is saturated with platforms addressing student success, early alerts, and academic planning. However, an analysis of the competitive landscape reveals that the specific problem of student-centered decision clarity remains largely unsolved.
+Product Category
+Example Platforms
+Primary Buyer & User
+What it Solves
+Where Student-Centered Clarity Fails
+Student Information Systems (SIS)
+Ellucian Banner, Workday Student
+Institution (Registrar, IT)
+Acts as the foundational database for grades, enrollment, and finance.
+Built for administrators. The UI is transactional and opaque. Data relies on slow batch-syncing.
+Degree Audit Systems
+DegreeWorks, uAchieve
+Institution (Advisors, Registrar)
+Compares completed courses against catalog requirements for graduation compliance.
+Student-reported experience indicates audits present massive data dumps without prioritizing next steps.
+Student Success Mgmt. Systems (SSMS)
+EAB Navigate, Civitas Learning, Stellic
+Institution (Advising Directors, Provosts)
+Predictive analytics, risk stratification, early alerts, and advisor case management.
+Fundamentally B2B products designed for advisor workflows. Student-facing apps suffer from feature bloat.
+Behavioral Nudge Tools
+Nearpeer, Signal Vine
+Institution (Admissions, Success)
+Automated text messaging to prevent "summer melt" and boost engagement.
+Peer-reviewed evidence shows nudges without deep structural support fail to resolve complex academic blockers.
+
+Competitive Differentiation
+Existing systems fail to create student clarity because they either present too much raw data without prioritizing action (Degree Audits) or focus on institutional risk management rather than student autonomy (SSMS platforms). For example, while EAB Navigate offers student-facing mobile applications that feature appointment scheduling and broad nudges, its core architecture is designed to feed predictive risk models for administrators. [1][2][3][4]
+The proposed "Know Your Next Move" concept is highly differentiated by its radical constraint. It does not attempt to be a comprehensive advising operating system. Instead, it limits the interface strictly to the student's immediate spatial reality: Where am I, what are my next three steps, and what is in my way? Furthermore, peer-reviewed evidence by the NBER demonstrates that low-touch behavioral nudges (like generic text reminders) are ineffective if the student lacks a clear pathway to execute the required action. By pairing the "nudge" directly with the resolution pathway, the proposed platform bridges the gap between information availability and actionability. [1][2][3][4]
+Deliverable 6: Minimum Viable Student View
+To accurately test the core hypothesis, the minimum viable product (MVP) prototype must contain the absolute smallest amount of information necessary for a student to make an accurate academic decision. Providing more data risks re-introducing the cognitive overload present in legacy systems. The recommended first prototype contains only three essential domains:
+Section 1: My Position
+￼ Current Academic Goal: (e.g., B.S. in Computer Science).
+￼ Why it is needed: Establishes the ultimate target.
+￼ Source / Verification: Pulled from the SIS. For the test, entered manually.
+￼ Progress Indicator: A simple visual progress bar (e.g., 60/120 credits completed).
+￼ Why it is needed: Satisfies the psychological need for "competence" under Self-Determination Theory (SDT) by showing tangible progression. [1][2][3][4]
+￼ Source / Verification: Calculated from the Degree Audit.
+￼ Financial Aid / SAP Proximity Warning: A subtle visual indicator if the student is approaching the 150% maximum timeframe for federal aid or state excess credit surcharges.
+￼ Why it is needed: Prevents catastrophic financial surprises that cause stop-outs. [1][2][3][4]
+￼ Source / Verification: Financial Aid data.
+Section 2: My Next Moves
+￼ Action 1, Action 2, and Action 3: (e.g., 1. Register for MATH 201; 2. Submit Major Declaration Form; 3. Schedule Junior Audit with Advisor).
+￼ Why it is needed: Reduces choice paralysis. Constraining the view to exactly three actions forces prioritization and removes the noise of the standard degree audit.
+￼ Source / Verification: Manually assembled by researchers for the test. Eventually requires a rules-engine overlay on degree maps.
+￼ Relevant Deadlines: Explicit dates associated with the actions.
+￼ Why it is needed: Creates urgency and temporal context.
+￼ Contextual Explanation (The "Why"): (e.g., "MATH 201 is a strict prerequisite for all senior-level courses").
+￼ Why it is needed: Translates the hidden curriculum into plain language, fostering independent comprehension. [1][2][3][4]
+Section 3: My Blockers
+￼ Active Holds: (e.g., Bursar Hold - $250 Balance).
+￼ Why it is needed: Prevents failure at the point of execution.
+￼ Source / Verification: SIS holds table.
+￼ Resolution Pathway: (e.g., "Click here to pay balance" or "Contact Financial Aid at 555-0199").
+￼ Why it is needed: Eliminates avoidable advisor dependence, routing non-academic questions to the correct administrative office.
+Crucial Constraint: For the first test, all fields must be populated manually by the research team acting as a "concierge." Attempting automated accuracy verification, live SIS integration, or advisor review at this stage violates the principle of the "smallest valid test."
+Deliverable 7: First Experiment Design
+The objective of the first experiment is to evaluate the core hypothesis without writing production code, navigating lengthy procurement cycles, or integrating with live university APIs (e.g., Ellucian Ethos).
+Test Parameters
+￼ Target Audience: 8–12 current transfer students at a public four-year institution.
+￼ Recruitment Method: Outreach via transfer student organizations or academic success centers, offering a small stipend for a 45-minute remote interview.
+￼ Ethical and Privacy Considerations: No live FERPA-protected data will be connected. Students will interact with a standardized, fictionalized "mock student profile" that mimics a highly complex transfer scenario, entirely removing institutional liability and data privacy risks for the initial test.
+Phase 1: Baseline Condition (Current State)
+Ask the student to log into a mock university portal (simulating Banner/DegreeWorks) and complete the following task:
+￼ Research Script Prompt: "Using this student portal and degree audit, tell me exactly how many credits you need to graduate, what three specific things you must do before next semester, whether you have any holds preventing registration, and who you would contact to resolve a financial hold."
+￼ Metrics to Measure:
+￼ Time required to complete the task (seconds).
+￼ Number of discrete systems, tabs, or menus opened.
+￼ Correctness (Did they accurately identify prerequisites and holds?).
+￼ Observed frustration, hesitation, and self-reported confidence.
+Phase 2: Prototype Condition (Future State)
+Provide the student with a static, clickable Figma prototype of the "Know Your Next Move" simplified interface, populated with the exact same data scenario.
+￼ Research Script Prompt: "Now, using this new dashboard, answer the exact same questions."
+￼ Metrics to Measure:
+￼ Measure the identical variables (Time, clicks, correctness, confidence).
+Phase 3: Qualitative Interview & Thresholds
+￼ Interview Questions: "Which view made you feel more prepared to speak with an advisor?" "What information on the new view was unnecessary?" "Did you feel you needed an advisor to interpret the second view?"
+￼ Success Thresholds: The prototype demonstrates a >50% reduction in time-to-answer, 100% accuracy in identifying blockers, and a qualitative shift from confusion to high confidence.
+￼ Failure Thresholds: Students still cannot identify their next actions without asking the researcher for interpretation, indicating that the UI remains too complex.
+Deliverable 8: Know Your Next Move Challenge
+To drive student engagement without trivializing the serious nature of academic advising, the platform should employ a light gamification layer. Drawing on peer-reviewed evidence regarding Self-Determination Theory (SDT), gamification must strictly avoid "pointsification" (extrinsic rewards that undermine intrinsic motivation). Instead, it must utilize informational feedback that fulfills the fundamental psychological needs for Autonomy, Competence, and Relatedness. [1][2][3][4]
+The "Know Your Next Move" challenge is a digital onboarding sequence designed to be completed in under 15 minutes prior to an advising appointment.
+The Five Missions
+Gamification Mechanics
+Deliverable 9: Benefit Model & Workstream 10 Integration
+The business viability of the product relies on delivering distinct, measurable value to three separate stakeholders. This model incorporates findings from Workstream 10 regarding potential advisor responses and concerns.
+Stakeholder
+Proposed Benefit
+Supporting Evidence
+Required Validation Metric
+Time Horizon
+Unable-to-Verify Assumption
+Students
+Reduced time-to-degree and mitigation of excess credit accumulation.
+Government Data: Average transfer student loses 43% of credits; excess credits cost thousands in tuition.
+Reduction in average excess credits at graduation for the cohort using the tool.
+2–4 Academic Years
+Assumes students will consistently log in and act proactively on the information.
+Advisors
+Shift from transactional data-retrieval to high-value, developmental mentoring.
+Advisor-Reported Experience: Advising time is consumed by explaining basic degree requirements and policies.
+Percentage of appointment time spent discussing career/goals versus basic scheduling and holds.
+1 Academic Term
+Assumes advisors will trust the software and not feel compelled to double-check the data manually.
+Institutions
+Increased retention rates, decreased administrative support tickets, and improved compliance.
+Institution-Reported Result: Clear pathways and 15-credit momentum highly correlate with persistence.
+Term-to-term persistence rates; reduction in help-desk tickets for basic registrar queries.
+1–2 Academic Years
+Assumes the institution possesses the data infrastructure to eventually automate the inputs accurately.
+
+Advisor Response and Concerns (Workstream 10)
+While the proposed tool aims to alleviate advisor overload, advisor-reported experiences suggest potential resistance. Advisors may fear role displacement, or express concerns regarding data accuracy and institutional liability if the software provides incorrect recommendations. To mitigate this, the platform must clearly position itself as an appointment-preparation tool that enhances, rather than replaces, professional academic judgment. When students arrive prepared with a clear status summary and identified blockers, advisors can dedicate their limited time to navigating policy exceptions, complex transfer credit appeals, and personal counseling—tasks that should never be delegated to software. [1]
+Workstreams 11 & 12: Institutional Data, Privacy, and Business Model
+Before finalizing the decision framework, it is imperative to address the realities of institutional procurement and data privacy.
+Privacy and Education-Data (Workstream 11)
+Any platform displaying academic progress is subject to the Family Educational Rights and Privacy Act (FERPA). Industry analysis indicates that to eventually scale this product, institutions will require vendors to complete rigorous security assessments, including the Higher Education Community Vendor Assessment Toolkit (HECVAT) and a Voluntary Product Accessibility Template (VPAT) for ADA compliance. Because live integrations with SIS platforms expose institutions to massive data liability, the first test must rely strictly on mock data or data that students manually enter and consent to share. Furthermore, AI-generated recommendations pose a unique institutional risk; if an algorithmic hallucination advises a student to drop a required course, the institution carries the liability. Therefore, recommendations must remain strictly deterministic based on published degree maps. [1]
+Determine the Buyer and Business Model (Workstream 12)
+While the student is the primary user, the enterprise SIS and SSMS markets are dominated by entrenched B2B players characterized by multi-year sales cycles and massive implementation burdens. Positioning this tool as a comprehensive "Advising Operating System" will trigger insurmountable procurement barriers for an early-stage product.
+Instead, the strongest initial business model is Department Licensing. By building a lightweight interface that requires no central IT integration (initially functioning via secure CSV uploads or direct student entry), the product can be sold as a low-cost, departmental tool directly to Directors of Transfer Student Success or Academic Success Offices. This bypasses the centralized procurement bureaucracy while delivering immediate value to the most vulnerable student segments. [1]
+Deliverable 10: Decision Framework
+The research concludes by returning to the final strategic question: What is the smallest student-facing experience that can prove students gain meaningful control over their academic path by knowing where they are, what comes next, and when they need help?
+Final Recommendation: Proceed with the proposed test, but strictly narrow the user segment and the workflow.
+The evidence robustly supports the core hypothesis that radical informational clarity reduces dependency on manual advisor interpretation. However, building a comprehensive advising platform is a strategic error at this stage. The decision framework dictates the following parameters for execution:
+1. Narrow the User Segment: Execute the concierge usability test exclusively with Transfer Students. They represent the highest pain, highest consequence, and most measurable demographic for informational clarity.
+2. Narrow the Workflow: Do not build integrations for DegreeWorks, Banner, Canvas, or Workday. Do not attempt to calculate GPA impacts, predictive analytics, or long-term risk stratification. The test must rely on a manually assembled, static dashboard focusing only on the translation of institutional jargon into the "Position, Next Moves, Blockers" framework.
+3. Validate the UI, Not the Backend: The goal of the initial experiment is purely behavioral. If the simplified view allows transfer students to accurately identify their next three actions 50% faster than their current institutional systems, the student-empowerment hypothesis is validated.
+The evidence suggests that empowering the student through constrained, actionable clarity is both behaviorally sound and operationally necessary. The path to market must surgically avoid the structural bloat of institutional enterprise software until the core premise—that a clear view drives independent student action—is undeniably proven.
+This is for informational purposes only. For medical advice or diagnosis, consult a professional.
+
+1. https://institutionaleffectiveness.louisiana.edu/degree-works/advisor-resources/advisor-faqs (Advisor Degree Works FAQs | Office of Institutional Effectiveness - University of Louisiana at Lafayette)
+2. https://www.reddit.com/r/highereducation/comments/1881yv8/student_info_systems/ (Student Info Systems : r/highereducation - Reddit)
+3. https://www.barstow.edu/admissions-aid/financial-aid/financial-aid-policies/satisfactory-academic-progress (Satisfactory Academic Progress | Barstow Community College)
+4. https://indianapolis.iu.edu/cost-aid/financial-aid/manage-aid/maintain-eligibility.html (Maintain Financial Aid Eligibility - How to Keep Your Financial Aid - IU Indianapolis - Indiana University)
+5. http://www.compliance.lsu.edu/academic-progress-rate-1 (Academic Progress Rate - LSU Compliance)

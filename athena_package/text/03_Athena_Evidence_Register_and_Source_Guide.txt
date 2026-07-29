@@ -1,0 +1,95 @@
+Athena Evidence Register and Source Guide
+
+Traceability rules for the research package
+
+Source documents included
+
+Canonical source | Primary role | Notes
+
+Know Your Next Move: Reconstructing the Student Advising Problem and Designing the Smallest Test | Broad problem reconstruction, segment comparison, competitive framing, MVP and first experiment | Contains citations to institutional, government, financial-aid, NCAA, and advising sources.
+
+UL Lafayette Student Advising Validation Study and Read-Only Student Path Agent | Institution-specific segment, data, architecture, governance, and experiment validation | The two uploaded copies are byte-for-byte identical; one canonical copy is retained.
+
+Institutional Intelligence Assessment: University of Louisiana at Lafayette | Leadership, strategy, financial, systems, advising, reporting, stakeholder, and opportunity context | Contains a final evidence register header, but several sections still require claim-level verification before external publication.
+
+Evidence labels
+
+Label | Use
+
+Verified / sourced | Directly supported by a named source that can be opened and inspected.
+
+Institution-reported | Describes the institution’s stated process, metric, or system.
+
+Peer-reviewed evidence | Supported by academic research; applicability to Athena remains a product inference.
+
+Inference | A strategic interpretation derived from multiple facts or patterns.
+
+Unverified | A claim, workflow detail, estimate, or recommendation that still needs direct confirmation.
+
+Claims that should not be treated as settled
+
+Exact demand from students, recruiters, advisors, community colleges, or UL Lafayette buyers.
+
+Exact Banner table/API availability and institutional willingness to provide extracts.
+
+Exact transfer-credit evaluation latency for the intended pilot cohort.
+
+Advisor time savings, student action rates, retention impact, and tuition preservation.
+
+Procurement pathway, budget ownership, and willingness to license at the department level.
+
+Whether the recruiter or community-college use cases preserve enough of Athena’s core product advantage.
+
+Recommended source-audit format
+
+Claim | Source URL | Source type | Exact passage/page | Status | Where used | Notes
+
+Example: Transfer students lose a significant share of credits | Add authoritative URL | Government / research | Page or section | Verify | Segment rationale | Do not rely on an unsourced summary statistic.
+
+Source URLs extracted from the reports
+
+https://louisiana.edu/news/dr-ramesh-kolluru-appointed-ul-lafayette-president
+
+https://informaticsinstitute.louisiana.edu/node/315
+
+https://louisiana.edu/news/ul-lafayette-launches-new-strategic-plan-vision-louisiana
+
+https://thevermilion.net/wp-content/uploads/2025/01/Big-Pdf.pdf
+
+https://academicaffairs.louisiana.edu/sites/academicaffairs/files/New%20Faculty%20Orientation%20Combined%20Presentations_%20August%202024_Final_Compressed.pdf
+
+https://lla.la.gov/publicreports.nsf/0/88ad35f8498a4abb86258e11005da980/$file/summary0000ab62a.pdf
+
+https://www.researchgate.net/profile/Ramesh-Kolluru-5
+
+https://edtechmagazine.com/higher/article/2014/10/edtech-interview-ul-lafayettes-ramesh-kolluru
+
+https://ideas.repec.org/f/c/pca1332.html
+
+https://files.eric.ed.gov/fulltext/ED627995.pdf
+
+https://www.edresearch.edu.au/summaries-explainers/explainers/managing-cognitive-load-optimises-learning
+
+https://louisiana.edu/registrar/records/transfer-credit/will-my-credits-transfer
+
+https://universitycollege.louisiana.edu/current-students/transfer-plan
+
+https://louisiana.edu/studentsuccess/transfer/transfer-faqs
+
+https://louisiana.edu/registrar/services-resources/faqs/registration-faqs
+
+https://www.chepp.org/wp-content/uploads/2024/05/CHEPP_Cost-of-Todays-College-Credit_WHITE-PAPER-003-FINAL.pdf
+
+https://louisiana.edu/orientation/students/transfer-student-orientation
+
+https://research.com/student-guides/transfer-guides/what-transfer-students-should-know-about-credit-loss
+
+https://institutionaleffectiveness.louisiana.edu/degree-works/advisor-resources/advisor-faqs
+
+https://www.reddit.com/r/highereducation/comments/1881yv8/student_info_systems/
+
+https://www.barstow.edu/admissions-aid/financial-aid/financial-aid-policies/satisfactory-academic-progress
+
+https://indianapolis.iu.edu/cost-aid/financial-aid/manage-aid/maintain-eligibility.html
+
+http://www.compliance.lsu.edu/academic-progress-rate-1

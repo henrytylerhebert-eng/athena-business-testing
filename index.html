@@ -1,0 +1,1297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Athena customer discovery research, evidence, strategic options, and founder decision workspace.">
+  <title>Athena Research Workspace</title>
+  <style>
+    :root {
+      --ink: #10232d;
+      --muted: #5d7079;
+      --paper: #f4f1e9;
+      --panel: #fffdf8;
+      --panel-strong: #ffffff;
+      --line: #d9d9cf;
+      --navy: #0c2835;
+      --navy-2: #123a48;
+      --teal: #087f79;
+      --teal-dark: #05635f;
+      --teal-pale: #d8efea;
+      --coral: #df6f52;
+      --coral-pale: #f9e1d8;
+      --gold: #d7a93c;
+      --gold-pale: #f7edc9;
+      --blue: #3d73a6;
+      --blue-pale: #dfeaf5;
+      --shadow: 0 18px 48px rgba(20, 44, 52, .09);
+      --radius: 22px;
+      --sidebar: 282px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 88% 3%, rgba(215, 169, 60, .13), transparent 25rem),
+        var(--paper);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    body::before {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      content: "";
+      opacity: .22;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='160' height='160' viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+    }
+    a { color: inherit; }
+    button, input, textarea { font: inherit; }
+    button { color: inherit; }
+    button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible {
+      outline: 3px solid rgba(8, 127, 121, .35);
+      outline-offset: 3px;
+    }
+
+    .shell { min-height: 100vh; }
+    .sidebar {
+      position: fixed;
+      inset: 0 auto 0 0;
+      z-index: 10;
+      width: var(--sidebar);
+      padding: 28px 22px;
+      overflow-y: auto;
+      color: #eef8f5;
+      background:
+        radial-gradient(circle at 20% 0, rgba(36, 150, 139, .32), transparent 19rem),
+        linear-gradient(165deg, #103846 0%, var(--navy) 55%, #071e28 100%);
+      border-right: 1px solid rgba(255,255,255,.08);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+    .brand-mark {
+      display: grid;
+      flex: 0 0 47px;
+      width: 47px;
+      height: 47px;
+      place-items: center;
+      color: var(--navy);
+      background: #e9bd55;
+      border-radius: 50% 50% 45% 55%;
+      transform: rotate(-4deg);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.45);
+    }
+    .brand-mark svg { width: 25px; transform: rotate(4deg); }
+    .brand-name {
+      display: block;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      line-height: 1;
+      letter-spacing: .01em;
+    }
+    .brand-sub {
+      display: block;
+      margin-top: 5px;
+      color: #a9c5ca;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .side-label {
+      margin: 0 10px 10px;
+      color: #7fa4ab;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+    .nav { display: grid; gap: 5px; }
+    .nav a {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      padding: 10px 12px;
+      color: #bdd0d4;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: 11px;
+      transition: .2s ease;
+    }
+    .nav a::before {
+      width: 7px;
+      height: 7px;
+      content: "";
+      background: #5b7b82;
+      border-radius: 50%;
+      transition: .2s ease;
+    }
+    .nav a:hover, .nav a.active {
+      color: #fff;
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.08);
+    }
+    .nav a.active::before { background: #e9bd55; box-shadow: 0 0 0 4px rgba(233,189,85,.13); }
+    .side-card {
+      margin-top: 28px;
+      padding: 17px;
+      background: rgba(255,255,255,.065);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 15px;
+    }
+    .side-card strong { display: block; color: #fff; font-size: 13px; }
+    .side-card p { margin: 6px 0 13px; color: #9fb9be; font-size: 11px; line-height: 1.55; }
+    .side-card a {
+      color: #f1ca6d;
+      font-size: 11px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+    .side-footer {
+      margin-top: 22px;
+      color: #6f939a;
+      font-size: 10px;
+      line-height: 1.5;
+    }
+
+    .main { margin-left: var(--sidebar); }
+    .hero {
+      position: relative;
+      min-height: 520px;
+      padding: 72px clamp(28px, 6vw, 88px) 66px;
+      overflow: hidden;
+      color: white;
+      background:
+        linear-gradient(100deg, rgba(12,40,53,.98) 0%, rgba(12,40,53,.92) 52%, rgba(12,40,53,.35) 100%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='650' viewBox='0 0 1000 650'%3E%3Cg fill='none' stroke='%23087f79' stroke-width='2' opacity='.52'%3E%3Cpath d='M410 650C490 500 437 382 570 246S882 95 1000 0'/%3E%3Cpath d='M504 650c36-130 11-235 132-346S905 168 1000 78'/%3E%3Cpath d='M604 650c-4-112-6-214 94-291S920 276 1000 175'/%3E%3C/g%3E%3Cg fill='%23d7a93c' opacity='.85'%3E%3Ccircle cx='570' cy='246' r='6'/%3E%3Ccircle cx='698' cy='359' r='6'/%3E%3Ccircle cx='875' cy='126' r='5'/%3E%3C/g%3E%3Cg fill='none' stroke='%23ffffff' opacity='.08'%3E%3Ccircle cx='828' cy='256' r='190'/%3E%3Ccircle cx='828' cy='256' r='136'/%3E%3Ccircle cx='828' cy='256' r='82'/%3E%3C/g%3E%3C/svg%3E") center/cover;
+    }
+    .hero::after {
+      position: absolute;
+      right: -95px;
+      bottom: -175px;
+      width: 430px;
+      height: 430px;
+      content: "";
+      border: 1px solid rgba(255,255,255,.11);
+      border-radius: 50%;
+      box-shadow: 0 0 0 56px rgba(255,255,255,.025), 0 0 0 112px rgba(255,255,255,.018);
+    }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 17px;
+      color: #efc965;
+      font-size: 11px;
+      font-weight: 850;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { width: 30px; height: 1px; content: ""; background: currentColor; }
+    .hero h1 {
+      max-width: 800px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 7vw, 92px);
+      font-weight: 400;
+      line-height: .95;
+      letter-spacing: -.045em;
+    }
+    .hero h1 em { color: #8fd2c8; font-style: italic; }
+    .hero-lead {
+      max-width: 660px;
+      margin: 28px 0 0;
+      color: #c9dadd;
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.55;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 30px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 44px;
+      padding: 0 17px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      text-decoration: none;
+      background: var(--teal);
+      border: 1px solid var(--teal);
+      border-radius: 11px;
+      cursor: pointer;
+      transition: transform .18s ease, background .18s ease;
+    }
+    .button:hover { background: var(--teal-dark); transform: translateY(-1px); }
+    .button.ghost { background: transparent; border-color: rgba(255,255,255,.24); }
+    .button.ghost:hover { background: rgba(255,255,255,.08); }
+    .button.light { color: var(--navy); background: white; border-color: var(--line); }
+    .button.light:hover { background: #f6f7f4; }
+    .button.small { min-height: 36px; padding: 0 13px; font-size: 11px; }
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      margin-top: 48px;
+      color: #a9c2c7;
+      font-size: 11px;
+    }
+    .hero-meta span { display: flex; align-items: center; gap: 8px; }
+    .hero-meta span::before { width: 6px; height: 6px; content: ""; background: #e4b84f; border-radius: 50%; }
+
+    .content { padding: 0 clamp(24px, 5vw, 72px) 90px; }
+    .section {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 78px 0 0;
+    }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(240px, .7fr) minmax(320px, 1fr);
+      gap: 44px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+    .section-kicker {
+      margin: 0 0 8px;
+      color: var(--teal);
+      font-size: 10px;
+      font-weight: 850;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+    .section h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 4vw, 50px);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -.025em;
+    }
+    .section-intro { margin: 0; color: var(--muted); font-size: 15px; }
+    .section-intro strong { color: var(--ink); }
+    .panel {
+      background: rgba(255,253,248,.9);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .grid { display: grid; gap: 18px; }
+    .grid.three { grid-template-columns: repeat(3, 1fr); }
+    .grid.two { grid-template-columns: repeat(2, 1fr); }
+    .readout-card { padding: 24px; }
+    .readout-card .number {
+      display: grid;
+      width: 35px;
+      height: 35px;
+      margin-bottom: 35px;
+      place-items: center;
+      color: var(--teal);
+      font-size: 11px;
+      font-weight: 850;
+      background: var(--teal-pale);
+      border-radius: 50%;
+    }
+    .readout-card h3 { margin: 0 0 9px; font-family: Georgia, serif; font-size: 22px; font-weight: 400; }
+    .readout-card p { margin: 0; color: var(--muted); font-size: 13px; }
+    .signal {
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 0;
+      margin-top: 18px;
+      overflow: hidden;
+    }
+    .signal-main { padding: 32px; }
+    .signal-main blockquote {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(23px, 3vw, 36px);
+      line-height: 1.25;
+    }
+    .signal-main p { max-width: 740px; margin: 18px 0 0; color: var(--muted); font-size: 13px; }
+    .signal-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 28px;
+      color: white;
+      background: var(--navy);
+    }
+    .signal-side span { color: #96b7bc; font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+    .signal-side strong { margin-top: 9px; font-family: Georgia, serif; font-size: 24px; font-weight: 400; }
+    .boundary {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      margin-top: 18px;
+      padding: 19px 21px;
+      background: var(--gold-pale);
+      border: 1px solid #e6d59b;
+      border-radius: 15px;
+    }
+    .boundary svg { flex: 0 0 21px; width: 21px; color: #876811; }
+    .boundary p { margin: 0; color: #665727; font-size: 12px; }
+
+    .trail { position: relative; padding: 12px 0 0; }
+    .trail::before {
+      position: absolute;
+      top: 24px;
+      bottom: 12px;
+      left: 24px;
+      width: 1px;
+      content: "";
+      background: linear-gradient(var(--teal), var(--line));
+    }
+    .trail-item {
+      position: relative;
+      display: grid;
+      grid-template-columns: 49px minmax(170px, .36fr) 1fr;
+      gap: 23px;
+      padding: 0 0 27px;
+    }
+    .trail-node {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      width: 49px;
+      height: 49px;
+      place-items: center;
+      color: white;
+      font-family: Georgia, serif;
+      font-size: 17px;
+      background: var(--teal);
+      border: 7px solid var(--paper);
+      border-radius: 50%;
+    }
+    .trail-label { padding-top: 9px; }
+    .trail-label span { display: block; color: var(--teal); font-size: 9px; font-weight: 850; letter-spacing: .15em; text-transform: uppercase; }
+    .trail-label strong { display: block; margin-top: 4px; font-family: Georgia, serif; font-size: 19px; font-weight: 400; }
+    .trail-copy {
+      padding: 17px 20px;
+      background: rgba(255,255,255,.58);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+    .trail-copy p { margin: 0; color: var(--muted); font-size: 12px; }
+    .trail-copy b { color: var(--ink); }
+
+    .option-grid { grid-template-columns: repeat(2, 1fr); }
+    .option {
+      position: relative;
+      display: flex;
+      min-height: 315px;
+      flex-direction: column;
+      padding: 25px;
+      overflow: hidden;
+      transition: .2s ease;
+    }
+    .option::after {
+      position: absolute;
+      right: -42px;
+      bottom: -54px;
+      width: 140px;
+      height: 140px;
+      content: "";
+      border: 1px solid rgba(8,127,121,.12);
+      border-radius: 50%;
+      box-shadow: 0 0 0 26px rgba(8,127,121,.03);
+    }
+    .option.selected { border-color: var(--teal); box-shadow: 0 18px 48px rgba(8,127,121,.15); }
+    .option-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .option-letter {
+      color: var(--teal);
+      font-family: Georgia, serif;
+      font-size: 42px;
+      font-style: italic;
+      line-height: 1;
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 8px;
+      font-size: 9px;
+      font-weight: 850;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+    }
+    .status::before { width: 6px; height: 6px; content: ""; border-radius: 50%; }
+    .status.sourced { color: #08675e; background: var(--teal-pale); }
+    .status.sourced::before { background: var(--teal); }
+    .status.inference { color: #765c12; background: var(--gold-pale); }
+    .status.inference::before { background: var(--gold); }
+    .status.unverified { color: #9a4a35; background: var(--coral-pale); }
+    .status.unverified::before { background: var(--coral); }
+    .status.reported { color: #305d83; background: var(--blue-pale); }
+    .status.reported::before { background: var(--blue); }
+    .option h3 { margin: 17px 0 6px; font-family: Georgia, serif; font-size: 26px; font-weight: 400; line-height: 1.15; }
+    .option .user { margin: 0 0 16px; color: var(--teal); font-size: 11px; font-weight: 750; }
+    .option p { margin: 0 0 17px; color: var(--muted); font-size: 12px; }
+    .option-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin: auto 0 20px; }
+    .option-facts div { padding-top: 10px; border-top: 1px solid var(--line); }
+    .option-facts span { display: block; color: #819097; font-size: 9px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+    .option-facts strong { display: block; margin-top: 4px; font-size: 11px; line-height: 1.35; }
+    .route-button { position: relative; z-index: 1; align-self: flex-start; }
+    .route-button[aria-pressed="true"] { color: #fff; background: var(--teal); border-color: var(--teal); }
+    .selection-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-top: 18px;
+      padding: 20px 22px;
+      color: white;
+      background: var(--navy);
+      border-radius: 16px;
+    }
+    .selection-bar span { color: #91b2b8; font-size: 10px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .selection-bar strong { display: block; margin-top: 4px; font-family: Georgia, serif; font-size: 21px; font-weight: 400; }
+    .selection-bar p { max-width: 520px; margin: 0; color: #b9cdd1; font-size: 11px; }
+    .matrix { margin-top: 18px; padding: 6px 22px 17px; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 11px; }
+    th, td { padding: 15px 11px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+    th { color: #7c898e; font-size: 9px; letter-spacing: .11em; text-transform: uppercase; }
+    td:first-child { min-width: 150px; color: var(--ink); font-weight: 800; }
+    tr:last-child td { border-bottom: 0; }
+
+    .product-frame {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 18px;
+    }
+    .principles { padding: 28px; }
+    .principles h3 { margin: 0 0 18px; font-family: Georgia, serif; font-size: 27px; font-weight: 400; }
+    .principle { display: grid; grid-template-columns: 35px 1fr; gap: 12px; padding: 14px 0; border-top: 1px solid var(--line); }
+    .principle:first-of-type { border-top: 0; }
+    .principle b { display: grid; width: 30px; height: 30px; place-items: center; color: var(--teal); font-size: 11px; background: var(--teal-pale); border-radius: 9px; }
+    .principle strong { display: block; font-size: 12px; }
+    .principle p { margin: 4px 0 0; color: var(--muted); font-size: 11px; }
+    .prototype {
+      padding: 11px;
+      color: white;
+      background: var(--navy);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .prototype-bar { display: flex; align-items: center; justify-content: space-between; padding: 10px 13px 14px; color: #9bb9be; font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .dots { display: flex; gap: 4px; }
+    .dots i { width: 6px; height: 6px; background: #42626a; border-radius: 50%; }
+    .proto-body { padding: 19px; color: var(--ink); background: #f7f5ef; border-radius: 15px; }
+    .proto-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; margin-bottom: 18px; }
+    .proto-header span { color: var(--teal); font-size: 9px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    .proto-header h3 { margin: 2px 0 0; font-family: Georgia, serif; font-size: 25px; font-weight: 400; }
+    .proto-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .proto-card { min-height: 182px; padding: 16px; background: white; border: 1px solid var(--line); border-radius: 13px; }
+    .proto-card .icon { display: grid; width: 31px; height: 31px; margin-bottom: 18px; place-items: center; color: white; font-size: 11px; font-weight: 850; background: var(--teal); border-radius: 9px; }
+    .proto-card h4 { margin: 0 0 7px; font-size: 12px; }
+    .proto-card p { margin: 0; color: var(--muted); font-size: 10px; line-height: 1.5; }
+    .proto-card ul { margin: 7px 0 0; padding-left: 15px; color: var(--muted); font-size: 10px; }
+    .proto-card.alert { border-color: #e7bdaf; }
+    .proto-card.alert .icon { background: var(--coral); }
+    .pilot-line { display: flex; align-items: stretch; gap: 0; margin-top: 18px; overflow: hidden; }
+    .pilot-step { flex: 1; padding: 20px; background: var(--panel); border: 1px solid var(--line); border-right: 0; }
+    .pilot-step:first-child { border-radius: 15px 0 0 15px; }
+    .pilot-step:last-child { border-right: 1px solid var(--line); border-radius: 0 15px 15px 0; }
+    .pilot-step span { color: var(--teal); font-size: 9px; font-weight: 850; letter-spacing: .12em; text-transform: uppercase; }
+    .pilot-step strong { display: block; margin: 8px 0 5px; font-size: 12px; }
+    .pilot-step p { margin: 0; color: var(--muted); font-size: 10px; }
+
+    .evidence-toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .filters { display: flex; flex-wrap: wrap; gap: 7px; }
+    .filter {
+      padding: 7px 10px;
+      color: var(--muted);
+      font-size: 10px;
+      font-weight: 800;
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .filter.active { color: white; background: var(--navy); border-color: var(--navy); }
+    .search-wrap { position: relative; min-width: min(100%, 270px); }
+    .search-wrap svg { position: absolute; top: 11px; left: 12px; width: 16px; color: #7c8c91; }
+    .search-wrap input {
+      width: 100%;
+      height: 39px;
+      padding: 0 12px 0 37px;
+      color: var(--ink);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+    .evidence-list { display: grid; gap: 10px; }
+    .evidence-row {
+      display: grid;
+      grid-template-columns: 136px 1fr 195px;
+      gap: 18px;
+      align-items: center;
+      padding: 17px 19px;
+      background: rgba(255,253,248,.9);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+    }
+    .evidence-row[hidden] { display: none; }
+    .evidence-row h3 { margin: 0; font-size: 12px; }
+    .evidence-row p { margin: 3px 0 0; color: var(--muted); font-size: 10px; }
+    .evidence-source { color: #6c7d83; font-size: 10px; }
+    .no-results { display: none; padding: 25px; color: var(--muted); text-align: center; }
+    .no-results.visible { display: block; }
+
+    .library-grid { grid-template-columns: 1.15fr .85fr; }
+    .library-panel { padding: 26px; }
+    .library-panel h3 { margin: 0 0 6px; font-family: Georgia, serif; font-size: 25px; font-weight: 400; }
+    .library-panel > p { margin: 0 0 20px; color: var(--muted); font-size: 11px; }
+    .file-list { display: grid; gap: 8px; }
+    .file-link {
+      display: grid;
+      grid-template-columns: 36px 1fr auto;
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      text-decoration: none;
+      background: #f8f6f0;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      transition: .18s ease;
+    }
+    .file-link:hover { background: white; border-color: #9bbdb8; transform: translateX(2px); }
+    .file-type { display: grid; width: 34px; height: 34px; place-items: center; color: var(--teal); font-size: 8px; font-weight: 900; background: var(--teal-pale); border-radius: 8px; }
+    .file-link strong { display: block; font-size: 11px; }
+    .file-link span { color: #7a898e; font-size: 9px; }
+    .file-link .arrow { color: var(--teal); font-size: 15px; }
+    .source-links { display: grid; gap: 0; }
+    .source-links a {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 12px 0;
+      color: var(--ink);
+      font-size: 11px;
+      text-decoration: none;
+      border-top: 1px solid var(--line);
+    }
+    .source-links a:hover { color: var(--teal); }
+    .source-links small { color: var(--muted); text-align: right; }
+
+    .workbench {
+      display: grid;
+      grid-template-columns: .67fr 1.33fr;
+      gap: 18px;
+    }
+    .prompt-list { padding: 25px; color: white; background: var(--navy); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .prompt-list h3 { margin: 0 0 22px; font-family: Georgia, serif; font-size: 28px; font-weight: 400; }
+    .prompt { display: grid; grid-template-columns: 25px 1fr; gap: 10px; padding: 13px 0; color: #c4d6d9; font-size: 11px; border-top: 1px solid rgba(255,255,255,.1); }
+    .prompt b { color: #edc45e; }
+    .notes { padding: 26px; }
+    .notes-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 15px; margin-bottom: 20px; }
+    .notes h3 { margin: 0; font-family: Georgia, serif; font-size: 28px; font-weight: 400; }
+    .save-state { color: var(--teal); font-size: 9px; font-weight: 850; letter-spacing: .1em; text-transform: uppercase; }
+    .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .field { display: grid; gap: 6px; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { font-size: 10px; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+    .field input, .field textarea {
+      width: 100%;
+      padding: 11px 12px;
+      color: var(--ink);
+      resize: vertical;
+      background: #f8f6f0;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+    .field textarea { min-height: 88px; }
+    .field input:focus, .field textarea:focus { background: white; border-color: var(--teal); }
+    .note-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 17px; }
+
+    .footer {
+      margin: 80px clamp(24px, 5vw, 72px) 0;
+      padding: 28px 0 34px;
+      color: var(--muted);
+      font-size: 10px;
+      border-top: 1px solid var(--line);
+    }
+    .footer-inner {
+      display: flex;
+      max-width: 1220px;
+      margin: auto;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .footer strong { color: var(--ink); }
+    .toast {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 30;
+      padding: 12px 15px;
+      color: white;
+      font-size: 11px;
+      font-weight: 750;
+      background: var(--navy);
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: .2s ease;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    .mobile-bar { display: none; }
+
+    @media (max-width: 1040px) {
+      :root { --sidebar: 230px; }
+      .grid.three { grid-template-columns: 1fr 1fr; }
+      .readout-card:last-child { grid-column: 1 / -1; }
+      .product-frame, .library-grid { grid-template-columns: 1fr; }
+      .evidence-row { grid-template-columns: 125px 1fr; }
+      .evidence-source { grid-column: 2; }
+    }
+    @media (max-width: 780px) {
+      :root { --sidebar: 0px; }
+      html { scroll-padding-top: 75px; }
+      .sidebar { display: none; }
+      .mobile-bar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 59px;
+        padding: 0 18px;
+        color: white;
+        background: rgba(12,40,53,.97);
+        backdrop-filter: blur(12px);
+      }
+      .mobile-bar .brand-name { font-size: 20px; }
+      .mobile-bar button { padding: 7px 10px; color: white; font-size: 10px; font-weight: 800; background: transparent; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; }
+      .mobile-menu {
+        position: fixed;
+        inset: 59px 0 auto;
+        z-index: 19;
+        display: none;
+        padding: 10px 18px 18px;
+        background: var(--navy);
+        box-shadow: var(--shadow);
+      }
+      .mobile-menu.open { display: grid; }
+      .mobile-menu a { padding: 10px 0; color: #c3d5d8; font-size: 12px; font-weight: 700; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,.08); }
+      .main { margin-left: 0; }
+      .hero { min-height: auto; padding: 58px 25px 48px; }
+      .hero-meta { gap: 10px 18px; margin-top: 33px; }
+      .section { padding-top: 60px; }
+      .section-head { grid-template-columns: 1fr; gap: 14px; }
+      .grid.three, .grid.two, .option-grid, .workbench { grid-template-columns: 1fr; }
+      .readout-card:last-child { grid-column: auto; }
+      .signal { grid-template-columns: 1fr; }
+      .trail-item { grid-template-columns: 42px 1fr; gap: 16px; }
+      .trail::before { left: 20px; }
+      .trail-node { width: 42px; height: 42px; border-width: 6px; }
+      .trail-copy { grid-column: 2; }
+      .selection-bar { align-items: flex-start; flex-direction: column; }
+      .proto-grid { grid-template-columns: 1fr; }
+      .proto-card { min-height: auto; }
+      .pilot-line { display: grid; grid-template-columns: 1fr 1fr; }
+      .pilot-step, .pilot-step:first-child, .pilot-step:last-child { border: 1px solid var(--line); border-radius: 0; }
+      .evidence-row { grid-template-columns: 1fr; gap: 9px; }
+      .evidence-source { grid-column: auto; }
+      .field-grid { grid-template-columns: 1fr; }
+      .field.full { grid-column: auto; }
+      .footer-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 460px) {
+      .hero h1 { font-size: 48px; }
+      .content { padding-inline: 17px; }
+      .option-facts { grid-template-columns: 1fr; }
+      .pilot-line { grid-template-columns: 1fr; }
+      .evidence-toolbar { align-items: stretch; flex-direction: column; }
+      .search-wrap { width: 100%; }
+      .library-panel, .notes, .principles { padding: 20px; }
+    }
+    @media print {
+      body { background: white; }
+      .sidebar, .mobile-bar, .hero-actions, .evidence-toolbar, .note-actions, .route-button, .toast { display: none !important; }
+      .main { margin-left: 0; }
+      .hero { min-height: auto; padding: 36px; color: var(--ink); background: white; border-bottom: 2px solid var(--ink); }
+      .hero h1 em { color: var(--teal); }
+      .hero-lead, .hero-meta { color: var(--muted); }
+      .section { padding-top: 36px; break-inside: avoid; }
+      .panel, .prototype, .prompt-list { box-shadow: none; break-inside: avoid; }
+      .content { padding: 0 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Workspace navigation">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 6.2 9.2 9.7 11 7 20l5-3 5 3-2.7-9 3.5-1.8L12 2Z"/><circle cx="12" cy="11.2" r="2.2"/></svg>
+        </span>
+        <span><span class="brand-name">Athena</span><span class="brand-sub">Research workspace</span></span>
+      </div>
+      <p class="side-label">Research cockpit</p>
+      <nav class="nav">
+        <a class="active" href="#readout">Current readout</a>
+        <a href="#journey">Decision trail</a>
+        <a href="#options">Customer paths</a>
+        <a href="#product">Smallest test</a>
+        <a href="#evidence">Evidence register</a>
+        <a href="#library">Source library</a>
+        <a href="#workbench">Working session</a>
+      </nav>
+      <div class="side-card">
+        <strong>Complete workspace</strong>
+        <p>Open the canonical Drive folder for the full research organization and archive.</p>
+        <a href="https://drive.google.com/drive/folders/18LoogkEALsgv-7MryzuKzd82JS4j0MNU" target="_blank" rel="noreferrer">Open Google Drive ↗</a>
+      </div>
+      <p class="side-footer">Prepared for Grant Dozier<br>Portal build · 29 July 2026</p>
+    </aside>
+
+    <div class="mobile-bar">
+      <span class="brand-name">Athena</span>
+      <button id="menuButton" type="button" aria-expanded="false" aria-controls="mobileMenu">Navigate</button>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile workspace navigation">
+      <a href="#readout">Current readout</a>
+      <a href="#journey">Decision trail</a>
+      <a href="#options">Customer paths</a>
+      <a href="#product">Smallest test</a>
+      <a href="#evidence">Evidence register</a>
+      <a href="#library">Source library</a>
+      <a href="#workbench">Working session</a>
+    </nav>
+
+    <div class="main">
+      <header class="hero">
+        <p class="eyebrow">Customer discovery · Founder decision system</p>
+        <h1>From research to the <em>next right test.</em></h1>
+        <p class="hero-lead">A living workspace for inspecting Athena’s product thesis, comparing customer paths, challenging assumptions, and leaving with a decision—not another stack of documents.</p>
+        <div class="hero-actions">
+          <a class="button" href="#readout">Enter the research</a>
+          <a class="button ghost" href="#workbench">Start a working session</a>
+        </div>
+        <div class="hero-meta">
+          <span>4 customer paths</span>
+          <span>3 canonical source reports</span>
+          <span>Evidence labels preserved</span>
+          <span>Notes stay on this device</span>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="section" id="readout">
+          <div class="section-head">
+            <div><p class="section-kicker">01 · Current readout</p><h2>What the research says now</h2></div>
+            <p class="section-intro">The work has narrowed the thesis without closing the founder’s decision. <strong>The problem is supported; the buyer and first route remain open.</strong></p>
+          </div>
+          <div class="grid three">
+            <article class="panel readout-card" data-search="problem supported students fragmented systems cognitive overload unclear actions reactive blockers">
+              <span class="number">01</span>
+              <h3>Problem supported</h3>
+              <p>Students face fragmented systems, cognitive overload, unclear next actions, and blockers discovered too late.</p>
+            </article>
+            <article class="panel readout-card" data-search="product hypothesis position next three moves blockers simplified decision clarity">
+              <span class="number">02</span>
+              <h3>Product shape narrowed</h3>
+              <p>“My Position + My Next Three Moves + My Blockers” is the smallest useful experience identified for testing.</p>
+            </article>
+            <article class="panel readout-card" data-search="buyer demand open unverified recruiters advisors institutions students">
+              <span class="number">03</span>
+              <h3>Buyer still open</h3>
+              <p>Department, student-success, recruiter, community-college, and direct-to-student entry points still require demand evidence.</p>
+            </article>
+          </div>
+          <div class="panel signal">
+            <div class="signal-main">
+              <span class="status inference">Strongest current hypothesis</span>
+              <blockquote>Test whether a radically simplified view of position, next actions, deadlines, and blockers improves decision clarity and action completion.</blockquote>
+              <p>This is a learning hypothesis, not a final product verdict. The first test should avoid production SIS integration and automated academic decisions.</p>
+            </div>
+            <div class="signal-side">
+              <span>Most evidence-supported institutional test</span>
+              <strong>First-semester UL Lafayette transfer students with 30–60 accepted credits and unresolved applicability questions.</strong>
+            </div>
+          </div>
+          <div class="boundary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 9v5M12 17.5v.5"/></svg>
+            <p><strong>Evidence boundary:</strong> No direct demand, buyer commitment, willingness-to-pay, advisor time savings, retention impact, or production integration feasibility has been verified. Those remain explicit learning targets.</p>
+          </div>
+        </section>
+
+        <section class="section" id="journey">
+          <div class="section-head">
+            <div><p class="section-kicker">02 · Decision trail</p><h2>How each question changed the work</h2></div>
+            <p class="section-intro">A traceable path from a broad empowerment idea to a narrow behavioral test—then back to the unresolved customer question.</p>
+          </div>
+          <div class="trail">
+            <article class="trail-item" data-search="original thesis student empowerment">
+              <span class="trail-node">1</span>
+              <div class="trail-label"><span>Starting thesis</span><strong>Student empowerment</strong></div>
+              <div class="trail-copy"><p><b>Question created:</b> What exact student problem is painful, frequent, measurable, and small enough to test?</p></div>
+            </article>
+            <article class="trail-item" data-search="advising problem decision clarity information">
+              <span class="trail-node">2</span>
+              <div class="trail-label"><span>Problem reframed</span><strong>Decision clarity</strong></div>
+              <div class="trail-copy"><p>Students already have information. The gap is usable synthesis and prioritization. <b>Question:</b> who feels the strongest pain and urgency?</p></div>
+            </article>
+            <article class="trail-item" data-search="transfer students segment comparison">
+              <span class="trail-node">3</span>
+              <div class="trail-label"><span>Segment compared</span><strong>Transfer students</strong></div>
+              <div class="trail-copy"><p>Credit applicability and registration consequences made transfer students the strongest general segment. <b>Question:</b> can it be narrowed at one institution?</p></div>
+            </article>
+            <article class="trail-item" data-search="ul lafayette validation 30 60 credits equivalencies">
+              <span class="trail-node">4</span>
+              <div class="trail-label"><span>Context narrowed</span><strong>UL Lafayette</strong></div>
+              <div class="trail-copy"><p>The proposed cohort became first-semester transfers with 30–60 credits and unresolved equivalencies. <b>Question:</b> what is the smallest data footprint?</p></div>
+            </article>
+            <article class="trail-item" data-search="smallest useful experience position next moves blockers">
+              <span class="trail-node">5</span>
+              <div class="trail-label"><span>Experience reduced</span><strong>Three-panel view</strong></div>
+              <div class="trail-copy"><p>Position, next three moves, and blockers—with advisor-verified actions and no automated academic decisions. <b>Question:</b> does it change behavior?</p></div>
+            </article>
+            <article class="trail-item" data-search="pilot behavior action correction system switching">
+              <span class="trail-node">6</span>
+              <div class="trail-label"><span>Proof defined</span><strong>Behavioral pilot</strong></div>
+              <div class="trail-copy"><p>Measure whether students identify and complete the right next action with fewer corrections and less system switching. <b>Question:</b> which entry point first?</p></div>
+            </article>
+            <article class="trail-item" data-search="customer question community college recruiter gt m">
+              <span class="trail-node">7</span>
+              <div class="trail-label"><span>Decision reopened</span><strong>Customer route</strong></div>
+              <div class="trail-copy"><p>Community colleges and recruiters may offer faster entry, but create different users and value propositions. <b>Decision:</b> which route preserves the thesis and learns fastest?</p></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="options">
+          <div class="section-head">
+            <div><p class="section-kicker">03 · Customer paths</p><h2>Choose the first learning loop</h2></div>
+            <p class="section-intro">These routes are not mutually exclusive forever. The decision is which one should produce the <strong>first credible evidence.</strong></p>
+          </div>
+          <div class="grid option-grid">
+            <article class="panel option" data-route-card="A" data-search="UL Lafayette transfer advising pilot institutional retention">
+              <div class="option-top"><span class="option-letter">A</span><span class="status sourced">Deepest evidence</span></div>
+              <h3>UL Lafayette transfer advising pilot</h3>
+              <p class="user">First-semester transfer students · 30–60 credits</p>
+              <p>Student clarity, advisor preparation, and institutional retention value in a defined advising window.</p>
+              <div class="option-facts">
+                <div><span>Why consider</span><strong>Clearest evidence chain and measurable outcomes</strong></div>
+                <div><span>Primary risk</span><strong>Institutional access, governance, and speed</strong></div>
+              </div>
+              <button class="button light small route-button" type="button" data-route="A" aria-pressed="false">Mark as working route</button>
+            </article>
+            <article class="panel option" data-route-card="B" data-search="community college pathway bridge prospective transferring students">
+              <div class="option-top"><span class="option-letter">B</span><span class="status unverified">Under-researched</span></div>
+              <h3>Community-college pathway bridge</h3>
+              <p class="user">Prospective or transferring community-college students</p>
+              <p>Help students understand transferability, applicability, destination choices, and next steps.</p>
+              <div class="option-facts">
+                <div><span>Why consider</span><strong>Clear transition pain and regional ecosystem fit</strong></div>
+                <div><span>Primary risk</span><strong>Partner alignment and articulation accuracy</strong></div>
+              </div>
+              <button class="button light small route-button" type="button" data-route="B" aria-pressed="false">Mark as working route</button>
+            </article>
+            <article class="panel option" data-route-card="C" data-search="university recruiter field tool prospective students enrollment">
+              <div class="option-top"><span class="option-letter">C</span><span class="status unverified">Fastest proposed test</span></div>
+              <h3>University recruiter field tool</h3>
+              <p class="user">Prospective students interacting with recruiters</p>
+              <p>Collect lightweight context and return a useful, institution-informed next-step plan during recruitment.</p>
+              <div class="option-facts">
+                <div><span>Why consider</span><strong>Low integration and recruiter-led distribution</strong></div>
+                <div><span>Primary risk</span><strong>Drift toward CRM and lead capture</strong></div>
+              </div>
+              <button class="button light small route-button" type="button" data-route="C" aria-pressed="false">Mark as working route</button>
+            </article>
+            <article class="panel option" data-route-card="D" data-search="direct student decision clarity prototype fictional self entered">
+              <div class="option-top"><span class="option-letter">D</span><span class="status inference">Cleanest UX test</span></div>
+              <h3>Direct-to-student clarity prototype</h3>
+              <p class="user">Students using fictional or self-entered scenarios</p>
+              <p>Test position, next moves, and blockers without waiting for an institution or production data.</p>
+              <div class="option-facts">
+                <div><span>Why consider</span><strong>Cheap, fast test of the core experience</strong></div>
+                <div><span>Primary risk</span><strong>Weak buyer and workflow evidence</strong></div>
+              </div>
+              <button class="button light small route-button" type="button" data-route="D" aria-pressed="false">Mark as working route</button>
+            </article>
+          </div>
+          <div class="selection-bar" aria-live="polite">
+            <div><span>Working route</span><strong id="selectedRoute">No route selected yet</strong></div>
+            <p id="selectedRouteNote">Select a route above to carry it into the founder working session. This is a working choice, not a final commitment.</p>
+          </div>
+          <div class="panel matrix">
+            <table>
+              <thead><tr><th>Route</th><th>Learning speed</th><th>Evidence quality now</th><th>Core learning</th><th>Guardrail</th></tr></thead>
+              <tbody>
+                <tr><td>A · UL Lafayette</td><td>Moderate / slower</td><td>Highest of four</td><td>Institutional workflow + behavior</td><td>No live integration before sponsor validation</td></tr>
+                <tr><td>B · Community college</td><td>Potentially fast</td><td>Under-researched</td><td>Transition language + pathway need</td><td>Do not imply credit applicability certainty</td></tr>
+                <tr><td>C · Recruiter tool</td><td>Proposed fastest</td><td>Least validated</td><td>Desirability + distribution</td><td>Preserve student agency; resist CRM drift</td></tr>
+                <tr><td>D · Direct student</td><td>Fast</td><td>Strong for UX only</td><td>Clarity and comprehension</td><td>Do not treat UX preference as buyer demand</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="section" id="product">
+          <div class="section-head">
+            <div><p class="section-kicker">04 · Smallest test</p><h2>Prove clarity before infrastructure</h2></div>
+            <p class="section-intro">The package converges on a shared prototype layer that can travel across customer contexts while keeping academic judgment human-owned.</p>
+          </div>
+          <div class="product-frame">
+            <article class="panel principles">
+              <h3>Design constraints</h3>
+              <div class="principle"><b>01</b><div><strong>Decision layer, not system of record</strong><p>Translate and prioritize approved information; do not replace Banner, DegreeWorks, or advisors.</p></div></div>
+              <div class="principle"><b>02</b><div><strong>Three panels, no dashboard sprawl</strong><p>Current position, next three moves, and active blockers are the minimum useful surface.</p></div></div>
+              <div class="principle"><b>03</b><div><strong>Advisor-verified actions</strong><p>No automated academic decision, course substitution, or degree-applicability ruling.</p></div></div>
+              <div class="principle"><b>04</b><div><strong>Manual data is acceptable first</strong><p>Concierge assembly or secure extracts can test behavior without production integration.</p></div></div>
+              <div class="principle"><b>05</b><div><strong>Behavior over preference</strong><p>Measure correct action identification, completion, correction, confidence, and system switching.</p></div></div>
+            </article>
+            <article class="prototype" aria-label="Illustrative Athena prototype">
+              <div class="prototype-bar"><span>Illustrative test surface · Synthetic data</span><span class="dots"><i></i><i></i><i></i></span></div>
+              <div class="proto-body">
+                <div class="proto-header"><div><span>Welcome back</span><h3>Your path, made clear.</h3></div><span class="status inference">Prototype</span></div>
+                <div class="proto-grid">
+                  <div class="proto-card"><span class="icon">01</span><h4>My position</h4><p>Accepted credits, credits applying to the selected degree, and questions still awaiting review.</p></div>
+                  <div class="proto-card"><span class="icon">02</span><h4>My next three moves</h4><ul><li>Confirm course equivalency</li><li>Prepare advising questions</li><li>Resolve registration hold</li></ul></div>
+                  <div class="proto-card alert"><span class="icon">!</span><h4>My blockers</h4><p>One transfer course needs department review before it can be applied to your major.</p></div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="pilot-line">
+            <article class="pilot-step"><span>Stage 1</span><strong>Observe baseline</strong><p>How students currently reconstruct position and choose an action.</p></article>
+            <article class="pilot-step"><span>Stage 2</span><strong>Test comprehension</strong><p>Can they identify the right next move using a synthetic scenario?</p></article>
+            <article class="pilot-step"><span>Stage 3</span><strong>Test behavior</strong><p>Can they complete one verified action with fewer corrections?</p></article>
+            <article class="pilot-step"><span>Gate</span><strong>Decide what earned expansion</strong><p>Integration only follows demonstrated value and sponsor confirmation.</p></article>
+          </div>
+        </section>
+
+        <section class="section" id="evidence">
+          <div class="section-head">
+            <div><p class="section-kicker">05 · Evidence register</p><h2>Know what is fact, inference, and open</h2></div>
+            <p class="section-intro">Filter the central claims before using them in a pitch, pilot, product decision, or external publication.</p>
+          </div>
+          <div class="evidence-toolbar">
+            <div class="filters" role="group" aria-label="Filter evidence by status">
+              <button class="filter active" type="button" data-filter="all">All claims</button>
+              <button class="filter" type="button" data-filter="sourced">Sourced</button>
+              <button class="filter" type="button" data-filter="reported">Institution-reported</button>
+              <button class="filter" type="button" data-filter="inference">Inference</button>
+              <button class="filter" type="button" data-filter="unverified">Unverified</button>
+            </div>
+            <label class="search-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+              <span class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)">Search claims</span>
+              <input id="evidenceSearch" type="search" placeholder="Search claims and sources">
+            </label>
+          </div>
+          <div class="evidence-list">
+            <article class="evidence-row" data-status="sourced" data-search="fragmented systems cognitive load unclear next actions research literature source reports">
+              <div><span class="status sourced">Sourced</span></div><div><h3>Fragmentation and cognitive load are central advising frictions.</h3><p>Supported across the broad reconstruction and cited literature.</p></div><div class="evidence-source">Know Your Next Move · research literature</div>
+            </article>
+            <article class="evidence-row" data-status="sourced" data-search="UL Lafayette Banner DegreeWorks ULink transfer process official university">
+              <div><span class="status sourced">Sourced</span></div><div><h3>UL Lafayette uses multiple systems and processes relevant to transfer advising.</h3><p>System presence and public process descriptions can be inspected.</p></div><div class="evidence-source">UL Lafayette official sources · validation study</div>
+            </article>
+            <article class="evidence-row" data-status="reported" data-search="transfer evaluation advising handoffs institutional reported">
+              <div><span class="status reported">Institution-reported</span></div><div><h3>Transfer evaluation and advising involve cross-office handoffs.</h3><p>Public institutional descriptions support the formal journey; lived timing needs direct confirmation.</p></div><div class="evidence-source">Registrar · University College · Student Success</div>
+            </article>
+            <article class="evidence-row" data-status="inference" data-search="three panel product position moves blockers smallest useful experience">
+              <div><span class="status inference">Inference</span></div><div><h3>The three-panel view is the smallest useful Athena experience.</h3><p>A strategic synthesis to test—not an established product outcome.</p></div><div class="evidence-source">Research synthesis · prototype recommendation</div>
+            </article>
+            <article class="evidence-row" data-status="inference" data-search="first semester transfer 30 60 unresolved equivalency best cohort">
+              <div><span class="status inference">Inference</span></div><div><h3>First-semester transfers with 30–60 credits are the strongest UL pilot cohort.</h3><p>Supported by segment analysis, but not yet validated through direct participant demand.</p></div><div class="evidence-source">UL validation study · decision model</div>
+            </article>
+            <article class="evidence-row" data-status="unverified" data-search="student recruiter advisor buyer demand">
+              <div><span class="status unverified">Unverified</span></div><div><h3>Students, recruiters, advisors, or institutions will demand Athena.</h3><p>Requires direct interviews, observed behavior, and buyer discovery.</p></div><div class="evidence-source">No direct demand evidence in package</div>
+            </article>
+            <article class="evidence-row" data-status="unverified" data-search="integration API Banner extracts available willingness">
+              <div><span class="status unverified">Unverified</span></div><div><h3>Production data, APIs, or institutional extracts will be available.</h3><p>Technical possibility is not permission, procurement, or implementation readiness.</p></div><div class="evidence-source">Requires institutional technical validation</div>
+            </article>
+            <article class="evidence-row" data-status="unverified" data-search="time savings retention tuition impact action rates outcomes">
+              <div><span class="status unverified">Unverified</span></div><div><h3>Athena will save advisor time or improve retention and tuition outcomes.</h3><p>These are candidate outcome hypotheses, not measured results.</p></div><div class="evidence-source">No measurements found</div>
+            </article>
+            <article class="evidence-row" data-status="unverified" data-search="procurement budget department license buyer">
+              <div><span class="status unverified">Unverified</span></div><div><h3>A department can sponsor, procure, or license the pilot.</h3><p>Budget ownership and pathway remain open discovery questions.</p></div><div class="evidence-source">Requires sponsor and procurement interviews</div>
+            </article>
+          </div>
+          <div class="panel no-results" id="noResults">No claims match this filter and search.</div>
+        </section>
+
+        <section class="section" id="library">
+          <div class="section-head">
+            <div><p class="section-kicker">06 · Source library</p><h2>Move from summary to source</h2></div>
+            <p class="section-intro">The portal is a navigation and decision layer. The documents remain the durable research record.</p>
+          </div>
+          <div class="grid library-grid">
+            <article class="panel library-panel">
+              <h3>Research package</h3>
+              <p>Open local documents directly. Word files are presentation-ready; text files make the underlying content easy to inspect.</p>
+              <div class="file-list">
+                <a class="file-link" href="athena_package/00_START_HERE_Athena_Customer_Discovery_Workspace.docx"><span class="file-type">DOCX</span><span><strong>Start Here: Customer Discovery Workspace</strong><span>Current readout · package map · founder prompts</span></span><span class="arrow">↗</span></a>
+                <a class="file-link" href="athena_package/01_Athena_Research_Journey_and_Decision_Trail.docx"><span class="file-type">DOCX</span><span><strong>Research Journey &amp; Decision Trail</strong><span>Question-by-question evolution of the thesis</span></span><span class="arrow">↗</span></a>
+                <a class="file-link" href="athena_package/02_Athena_Customer_and_GTM_Options.docx"><span class="file-type">DOCX</span><span><strong>Customer &amp; GTM Options</strong><span>Four routes · risks · sequencing · criteria</span></span><span class="arrow">↗</span></a>
+                <a class="file-link" href="athena_package/03_Athena_Evidence_Register_and_Source_Guide.docx"><span class="file-type">DOCX</span><span><strong>Evidence Register &amp; Source Guide</strong><span>Traceability rules · boundaries · source URLs</span></span><span class="arrow">↗</span></a>
+                <a class="file-link" href="athena_package/04_Source_Institutional_Intelligence_Assessment.txt"><span class="file-type">TXT</span><span><strong>Institutional Intelligence Assessment</strong><span>UL Lafayette systems, leadership, strategy, and context</span></span><span class="arrow">↗</span></a>
+                <a class="file-link" href="athena_package/05_Source_UL_Lafayette_Student_Advising_Validation.txt"><span class="file-type">TXT</span><span><strong>UL Lafayette Student Advising Validation</strong><span>Cohort · workflow · architecture · governance · pilot</span></span><span class="arrow">↗</span></a>
+                <a class="file-link" href="athena_package/06_Source_Know_Your_Next_Move.txt"><span class="file-type">TXT</span><span><strong>Know Your Next Move</strong><span>Problem reconstruction · segments · competitors · first test</span></span><span class="arrow">↗</span></a>
+              </div>
+            </article>
+            <article class="panel library-panel">
+              <h3>Inspect key public sources</h3>
+              <p>Representative authoritative links from the package. Use the full evidence register before external publication.</p>
+              <div class="source-links">
+                <a href="https://louisiana.edu/registrar/records/transfer-credit/will-my-credits-transfer" target="_blank" rel="noreferrer"><span>Will my credits transfer?</span><small>UL Lafayette Registrar ↗</small></a>
+                <a href="https://universitycollege.louisiana.edu/current-students/transfer-plan" target="_blank" rel="noreferrer"><span>Transfer plan</span><small>University College ↗</small></a>
+                <a href="https://louisiana.edu/studentsuccess/transfer/transfer-faqs" target="_blank" rel="noreferrer"><span>Transfer FAQs</span><small>Student Success ↗</small></a>
+                <a href="https://louisiana.edu/registrar/services-resources/faqs/registration-faqs" target="_blank" rel="noreferrer"><span>Registration FAQs</span><small>UL Lafayette Registrar ↗</small></a>
+                <a href="https://institutionaleffectiveness.louisiana.edu/degree-works/advisor-resources/advisor-faqs" target="_blank" rel="noreferrer"><span>Degree Works advisor FAQs</span><small>Institutional Effectiveness ↗</small></a>
+                <a href="https://files.eric.ed.gov/fulltext/ED627995.pdf" target="_blank" rel="noreferrer"><span>Transfer-student evidence</span><small>ERIC full text ↗</small></a>
+                <a href="https://drive.google.com/drive/folders/18LoogkEALsgv-7MryzuKzd82JS4j0MNU" target="_blank" rel="noreferrer"><span>Complete Athena workspace</span><small>Google Drive ↗</small></a>
+              </div>
+              <div class="boundary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 9v5M12 17.5v.5"/></svg>
+                <p>Several source reports mix directly sourced facts, institution-reported practices, literature, and strategic inference. Verify claim-level support before reusing a conclusion externally.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="workbench">
+          <div class="section-head">
+            <div><p class="section-kicker">07 · Working session</p><h2>Turn the review into a decision</h2></div>
+            <p class="section-intro">Notes autosave in this browser only. Export a Markdown decision brief when the conversation is ready to become a durable record.</p>
+          </div>
+          <div class="workbench">
+            <aside class="prompt-list">
+              <h3>Questions for Grant</h3>
+              <div class="prompt"><b>01</b><span>Which customer problem feels most central to Athena—not merely easiest to test?</span></div>
+              <div class="prompt"><b>02</b><span>Who should receive value first: student, recruiter, advisor, or institutional operator?</span></div>
+              <div class="prompt"><b>03</b><span>Which test produces credible evidence without institutional integration?</span></div>
+              <div class="prompt"><b>04</b><span>What observed outcome would make you change the product direction?</span></div>
+              <div class="prompt"><b>05</b><span>What should Athena deliberately refuse to become?</span></div>
+            </aside>
+            <article class="panel notes">
+              <div class="notes-top"><div><h3>Founder decision brief</h3><span class="save-state" id="saveState">Ready · saved locally</span></div><button class="button light small" id="printButton" type="button">Print portal</button></div>
+              <div class="field-grid">
+                <div class="field"><label for="decisionOwner">Decision owner</label><input id="decisionOwner" data-note="owner" placeholder="Grant Dozier"></div>
+                <div class="field"><label for="decisionDate">Working date</label><input id="decisionDate" data-note="date" type="date"></div>
+                <div class="field full"><label for="centralProblem">Central problem Athena must own</label><textarea id="centralProblem" data-note="problem" placeholder="What problem is important enough to anchor the product?"></textarea></div>
+                <div class="field"><label for="firstUser">First value recipient</label><input id="firstUser" data-note="user" placeholder="Student, recruiter, advisor..."></div>
+                <div class="field"><label for="firstTest">First learning loop</label><input id="firstTest" data-note="test" placeholder="Describe the smallest credible test"></div>
+                <div class="field"><label for="successSignal">Evidence that supports continuing</label><textarea id="successSignal" data-note="success" placeholder="What observable behavior would earn the next step?"></textarea></div>
+                <div class="field"><label for="stopSignal">Evidence that changes direction</label><textarea id="stopSignal" data-note="stop" placeholder="What result would invalidate the route?"></textarea></div>
+                <div class="field full"><label for="guardrails">Non-negotiables and guardrails</label><textarea id="guardrails" data-note="guardrails" placeholder="What must Athena preserve—and refuse to become?"></textarea></div>
+                <div class="field full"><label for="openQuestions">Open questions and next conversations</label><textarea id="openQuestions" data-note="questions" placeholder="Who needs to be interviewed? What must be verified?"></textarea></div>
+              </div>
+              <div class="note-actions">
+                <button class="button small" id="exportButton" type="button">Export decision brief</button>
+                <button class="button light small" id="copyButton" type="button">Copy as Markdown</button>
+                <button class="button light small" id="clearButton" type="button">Clear local notes</button>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-inner"><span><strong>Athena Research Workspace</strong> · Prepared as a creative thought-partner environment.</span><span>Claims should be reviewed against the evidence register and original sources.</span></div>
+      </footer>
+    </div>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    (() => {
+      const parentFolder = decodeURIComponent(location.pathname).split("/").slice(-2, -1)[0];
+      if (parentFolder === "athena_package") {
+        document.querySelectorAll('a[href^="athena_package/"]').forEach(link => {
+          link.setAttribute("href", link.getAttribute("href").replace(/^athena_package\//, ""));
+        });
+      }
+      const routeNames = {
+        A: "A · UL Lafayette transfer advising pilot",
+        B: "B · Community-college pathway bridge",
+        C: "C · University recruiter field tool",
+        D: "D · Direct-to-student clarity prototype"
+      };
+      const noteKey = "athena.workspace.v1";
+      const routeKey = "athena.route.v1";
+      const toast = document.getElementById("toast");
+      let toastTimer;
+
+      function showToast(message) {
+        toast.textContent = message;
+        toast.classList.add("show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove("show"), 2400);
+      }
+
+      const menuButton = document.getElementById("menuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuButton.addEventListener("click", () => {
+        const open = mobileMenu.classList.toggle("open");
+        menuButton.setAttribute("aria-expanded", String(open));
+      });
+      mobileMenu.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        menuButton.setAttribute("aria-expanded", "false");
+      }));
+
+      const navLinks = [...document.querySelectorAll(".sidebar .nav a")];
+      const sections = navLinks.map(link => document.querySelector(link.getAttribute("href"))).filter(Boolean);
+      const observer = new IntersectionObserver(entries => {
+        const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) return;
+        navLinks.forEach(link => link.classList.toggle("active", link.getAttribute("href") === "#" + visible.target.id));
+      }, { rootMargin: "-20% 0px -65% 0px", threshold: [0, .2, .5] });
+      sections.forEach(section => observer.observe(section));
+
+      function setRoute(route, announce = false) {
+        document.querySelectorAll("[data-route-card]").forEach(card => card.classList.toggle("selected", card.dataset.routeCard === route));
+        document.querySelectorAll("[data-route]").forEach(button => {
+          const active = button.dataset.route === route;
+          button.setAttribute("aria-pressed", String(active));
+          button.textContent = active ? "Working route selected" : "Mark as working route";
+        });
+        const selectedRoute = document.getElementById("selectedRoute");
+        selectedRoute.textContent = routeNames[route] || "No route selected yet";
+        if (route) localStorage.setItem(routeKey, route); else localStorage.removeItem(routeKey);
+        if (announce) showToast(routeNames[route] + " selected");
+      }
+      document.querySelectorAll("[data-route]").forEach(button => button.addEventListener("click", () => setRoute(button.dataset.route, true)));
+      setRoute(localStorage.getItem(routeKey));
+
+      let evidenceFilter = "all";
+      const evidenceSearch = document.getElementById("evidenceSearch");
+      const evidenceRows = [...document.querySelectorAll(".evidence-row")];
+      function applyEvidenceFilters() {
+        const term = evidenceSearch.value.trim().toLowerCase();
+        let visible = 0;
+        evidenceRows.forEach(row => {
+          const statusMatch = evidenceFilter === "all" || row.dataset.status === evidenceFilter;
+          const searchMatch = !term || row.dataset.search.toLowerCase().includes(term) || row.textContent.toLowerCase().includes(term);
+          row.hidden = !(statusMatch && searchMatch);
+          if (!row.hidden) visible += 1;
+        });
+        document.getElementById("noResults").classList.toggle("visible", visible === 0);
+      }
+      document.querySelectorAll("[data-filter]").forEach(button => button.addEventListener("click", () => {
+        evidenceFilter = button.dataset.filter;
+        document.querySelectorAll("[data-filter]").forEach(item => item.classList.toggle("active", item === button));
+        applyEvidenceFilters();
+      }));
+      evidenceSearch.addEventListener("input", applyEvidenceFilters);
+
+      const fields = [...document.querySelectorAll("[data-note]")];
+      function getSavedNotes() {
+        try { return JSON.parse(localStorage.getItem(noteKey) || "{}"); }
+        catch { return {}; }
+      }
+      function saveNotes() {
+        const notes = {};
+        fields.forEach(field => notes[field.dataset.note] = field.value);
+        localStorage.setItem(noteKey, JSON.stringify(notes));
+        const state = document.getElementById("saveState");
+        state.textContent = "Saved locally · " + new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+      }
+      const saved = getSavedNotes();
+      fields.forEach(field => {
+        field.value = saved[field.dataset.note] || "";
+        field.addEventListener("input", saveNotes);
+      });
+      if (!document.getElementById("decisionDate").value) {
+        document.getElementById("decisionDate").value = new Date().toISOString().slice(0, 10);
+        saveNotes();
+      }
+
+      function markdownBrief() {
+        const value = key => (document.querySelector(`[data-note="${key}"]`).value.trim() || "_Not decided_");
+        const route = routeNames[localStorage.getItem(routeKey)] || "_No working route selected_";
+        return `# Athena Founder Decision Brief
+
+**Decision owner:** ${value("owner")}
+**Working date:** ${value("date")}
+**Working customer route:** ${route}
+
+## Central problem Athena must own
+
+${value("problem")}
+
+## First value recipient
+
+${value("user")}
+
+## First learning loop
+
+${value("test")}
+
+## Evidence that supports continuing
+
+${value("success")}
+
+## Evidence that changes direction
+
+${value("stop")}
+
+## Non-negotiables and guardrails
+
+${value("guardrails")}
+
+## Open questions and next conversations
+
+${value("questions")}
+
+---
+Generated from the Athena Research Workspace. Working decisions should be reviewed against the evidence register and original sources.
+`;
+      }
+
+      document.getElementById("exportButton").addEventListener("click", () => {
+        const blob = new Blob([markdownBrief()], { type: "text/markdown;charset=utf-8" });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = "Athena_Founder_Decision_Brief.md";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+        showToast("Decision brief exported");
+      });
+      document.getElementById("copyButton").addEventListener("click", async () => {
+        try { await navigator.clipboard.writeText(markdownBrief()); showToast("Markdown copied"); }
+        catch { showToast("Clipboard unavailable in this browser"); }
+      });
+      document.getElementById("clearButton").addEventListener("click", () => {
+        if (!window.confirm("Clear all Athena notes saved in this browser?")) return;
+        fields.forEach(field => field.value = "");
+        document.getElementById("decisionDate").value = new Date().toISOString().slice(0, 10);
+        saveNotes();
+        showToast("Local notes cleared");
+      });
+      document.getElementById("printButton").addEventListener("click", () => window.print());
+    })();
+  </script>
+</body>
+</html>

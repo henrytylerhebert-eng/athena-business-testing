@@ -1,0 +1,235 @@
+Institutional Intelligence Assessment: University of Louisiana at Lafayette
+1. Executive Briefing
+The University of Louisiana at Lafayette (UL Lafayette) operates as a rapidly evolving, technologically oriented R1 research institution characterized by an aggressive pursuit of data-driven growth, balanced against the fiscal constraints typical of the Louisiana public higher education sector. An analysis of the institution’s structural, financial, and strategic operations reveals a university in a period of significant transition. The recent elevation of Dr. Ramesh Kolluru to the presidency in February 2026 marks a decisive shift toward an operating model heavily influenced by computer science, big data analytics, and public-private innovation. [1][2]
+The university’s strategic posture, codified in the 2023-2028 "Vision. Louisiana." plan, prioritizes expanding enrollment to nearly 17,000 students by 2029, elevating first-to-second-year retention to 80%, and vastly expanding research expenditures. However, the operational execution of these ambitious goals is currently constrained by structural bifurcations in student advising, a reliance on manual faculty interventions for early alerts, and a tightening state budget exacerbated by the sunsetting of state sales taxes. [1][2]
+For external partners proposing enterprise technology—particularly student success and advising platforms—UL Lafayette presents a highly sophisticated, technically demanding buyer. The university’s leadership includes nationally recognized experts in decision informatics, systems resilience, and data science who have built NSF-funded centers dedicated to visual and decision informatics. Consequently, any technological adoption must transcend basic workflow automation. It must demonstrate rigorous interoperability with existing legacy systems, provide deep compliance and audit trails to satisfy recent legislative auditor scrutiny, and offer predictive analytics capable of demonstrating a direct return on investment through preserved tuition revenue and improved accreditation metrics. [1][2]
+2. Institutional Systems Map
+UL Lafayette functions through a decentralized but increasingly data-monitored operating system. The institutional architecture is divided into four interacting domains, each governed by different oversight bodies and funding mechanisms.
+The highest level of strategic and financial governance originates externally. The University of Louisiana System (UL System) and the Louisiana Board of Regents exercise top-down control over formula funding, capital outlay, and degree program approvals. Internally, the President's Cabinet and the University Council translate these mandates into operational budgets. The structural divide between the operating budget, which is highly constrained by state appropriations, and the capital outlay budget, which is robust with over one billion dollars approved for five-year plans, dictates institutional purchasing behavior. Software procurements are often scrutinized heavily unless they can be tied directly to capital projects, grant compliance, or immediate revenue generation. [1][2]
+The academic and research enterprise operates as a parallel, dual-headed institution. The Office of the Provost oversees academic instruction, faculty affairs, and degree pathways, while the Office of Research and Innovation manages the university's prestigious R1 research portfolio. The research enterprise is heavily funded by federal grants from the National Science Foundation (NSF) and the National Institutes of Health (NIH), alongside significant industry partnerships, utilizing advanced cyber-physical testbeds and informatics centers. This creates an internal culture that values empirical research and technical sophistication. [1][2]
+The student success and retention engine is centralized under the Division of Student Success, which houses the First-Year Experience, The Learning Center, and the Academic Success Center (ASC). The institutional system dictates a hard structural handoff for advising. Students with fewer than sixty credit hours are advised centrally by professional staff and peer mentors in the ASC, while those who surpass the sixty-credit threshold are transferred to faculty advisors within the academic deans' offices. This creates a segmented student journey where technology usage and intervention consistency vary wildly between the first and second halves of a degree. [1][2]
+The technological infrastructure relies on Ellucian Banner as the core enterprise resource planning (ERP) system, Degree Works for degree auditing, and CRM Advise, locally branded as Student Success Manager, for early alerts. The data flow between these systems is functional but heavily reliant on manual human input, creating distinct points of failure in the student success continuum, particularly when faculty must navigate away from their primary research and teaching tools to manually log student risk factors. [1][2]
+3. Executive Leadership Intelligence
+The executive leadership at UL Lafayette is distinguished by its deep internal institutional history and a pronounced academic bias toward quantitative disciplines, particularly computer science and statistics. This leadership composition ensures that institutional strategies are evaluated through a deeply analytical, data-centric lens.
+Dr. Ramesh Kolluru, appointed as the seventh president of the university in February 2026, represents a departure from traditional academic administration. Holding a Ph.D. in Computer Science from UL Lafayette, Dr. Kolluru previously served as the Vice President for Research, Innovation, and Economic Development. His career history includes serving as the Chief Innovation Officer at the U.S. Department of Health and Human Services and as a member of the FEMA National Advisory Council. His published research focuses heavily on cyber-physical systems, fuzzy logic control, big data analytics, and intelligent supply chain networks. Throughout his public speeches and interviews, his strategic priorities consistently orbit around applied artificial intelligence, public-private partnerships, research commercialization, and a philosophy he coined "Research for a Reason". He has explicitly stated that the university must use data to make decisions and practice what it preaches regarding decision informatics. [1][2]
+Dr. Jaimie Hebert, the Provost and Vice President for Academic Affairs, shares this quantitative background, holding a Ph.D. in Statistics from UL Lafayette. Prior to his current role, he served as the president of Georgia Southern University and as provost at Sam Houston State University. His mandate focuses on shared governance, academic program expansion, faculty recruitment, and enhancing rural economic growth through distance education. His presence reinforces a culture that demands rigorous, evidence-based performance measurement across all academic departments. [1][2]
+Dr. Edwin Litolff, assuming the role of Vice President for Administration and Finance in August 2025, brings vital fiscal stewardship to the executive team. With prior experience as the Chief Financial Officer at the University of New Orleans and interim president at UL Monroe, his expertise lies in navigating state budget reductions, strategic resource allocation, and maintaining operational efficiency amid shifting legislative appropriations. [1][2]
+Dr. Kumer Das serves as the Interim Vice President for Research and Innovation. With a background in statistical sciences, he is tasked with maintaining the university's Carnegie R1 status while resolving pressing audit findings from the Louisiana Legislative Auditor related to federal grant administration and personnel effort tracking.
+Leader
+Title
+Background & Expertise
+Strategic Priorities & Public Themes
+Dr. Ramesh Kolluru
+President
+Ph.D. Computer Science. Former VP Research, HHS Chief Innovation Officer.
+Decision informatics, applied AI, economic development, public-private partnerships, rigorous data-driven accountability.
+Dr. Jaimie Hebert
+Provost & VP Academic Affairs
+Ph.D. Statistics. Former President, Georgia Southern University.
+Academic program expansion, faculty recruitment, distance learning, statistical evaluation of student outcomes.
+Dr. Edwin Litolff
+VP Administration & Finance
+CFO experience at UNO, Interim President at ULM.
+Fiscal stewardship, budget stabilization, operational efficiency amid state funding cuts.
+Dr. Kumer Das
+Interim VP Research
+Statistical sciences, research integrity.
+Grant compliance, federal expenditure growth, maintaining R1 classification metrics.
+Dr. Beth Giroir
+Exec. Dir. Student Success
+Academic advising, retention strategies.
+First-year experience, managing the Academic Success Center, coordinating early alert CRM interventions.
+
+An analysis of these profiles reveals a cohesive leadership ideology centered on decision informatics and empirical validity. When engaging with this leadership team regarding enterprise technology, emotional appeals regarding student belonging will likely be subordinated to empirical demonstrations of data interoperability, predictive validity, and financial return on investment. The administration views the university as a complex system that must be optimized through continuous data analysis. [1][2][3][4][5]
+4. Institutional Strategy
+UL Lafayette’s strategic posture is codified in its 2023-2028 strategic plan, titled "Vision. Louisiana.". The plan directs the university's path by focusing on academic excellence, exceptional student experience, intentional stewardship, public impact research, and transformational community engagement. This overarching plan is supported by the Strategic Plan for Inclusive Excellence, which emphasizes holistic access, retention, and community engagement for underrepresented populations. [1][2][3][4][5]
+The institution evaluates its strategic success through highly specific, measurable key performance indicators mandated by both internal councils and the Louisiana Board of Regents. The university explicitly tracks the perceived gains of its senior students through the National Survey of Student Engagement, monitoring metrics such as critical thinking, clear writing, and the analysis of numerical information. [1][2][3][4][5]
+The primary quantitative goals driving the institution's operational strategy center on enrollment expansion and retention preservation. The university aims to increase its total Fall headcount enrollment to 16,878 students by 2029. Concurrently, the institution is aggressively working to increase the percentage of first-time, full-time, degree-seeking freshmen retained to their second Fall semester, targeting an 80% retention rate by 2030, up from a baseline that has historically hovered around 74%. The strategy also tracks third-year retention, aiming to move from a 60% baseline to a 68% target. Ultimately, the strategic plan targets an institutional statewide graduation rate of 63.7% within 150% of normal time.
+Strategic Priority
+Baseline Metric (Approximate)
+Target Metric (2029/2030)
+Primary Driver
+Enrollment Growth
+15,773 (Fall 2024)
+16,878
+Need-based scholarships, adult re-entry (Compete LA), transfer pipelines.
+First-to-Second Year Retention
+74.0%
+80.0%
+Enhanced early alerts, centralized ASC advising.
+First-to-Third Year Retention
+60.1%
+68.0%
+Degree Works utilization, faculty advising integration.
+Six-Year Graduation Rate
+57.3%
+63.7%
+Academic recovery, reduction in registration holds, seamless advising transitions.
+
+To support its reaffirmation of accreditation by SACSCOC, the university developed a Quality Enhancement Plan (QEP) known as "Advance." This initiative focuses on institutionalizing undergraduate research experiences, integrating high-impact practices directly into the curriculum. The success of this QEP is measured using Kirkpatrick's Four Levels of Evaluation, requiring the university to meticulously track student reactions, learning, behavioral transfer, and institutional results. This mandate necessitates sophisticated tracking systems capable of capturing co-curricular engagement outside the boundaries of the traditional student information system. [1][2][3][4][5][6]
+5. Financial Position
+UL Lafayette operates within a highly constrained and complex fiscal environment, characterized by divergent trends in state operating support, research funding, and capital investments. Understanding this financial dichotomy is essential for mapping the institution's capacity for new technology investments.
+The university's general operating budget is under severe pressure. The Louisiana state expenditure plan for FY 2025-2026 reflects a tightening fiscal environment, with State General Fund appropriations decreasing. The financial constraints are largely driven by the sunsetting of a state sales tax in FY 2025-26, which forced the Louisiana Board of Regents to develop contingency plans to accommodate a $250 million reduction across all public higher education systems. The university's administration has publicly noted that operating revenues and expenditures are at a standstill, requiring careful monitoring to prevent structural deficits. In response to this fiscal tightening, President Kolluru implemented immediate cost controls, operational reforms, and executive salary reductions in late 2025 to stabilize the university's finances. [1][2][3][4][5][6]
+In stark contrast to the constrained operating budget, UL Lafayette has experienced extraordinary success in securing capital outlay funding and expanding its research enterprise. The university received over one billion dollars in capital outlay approvals for projects spanning FY 2025-26 through FY 2029-30, allowing for massive physical infrastructure modernization. Simultaneously, research expenditures have seen explosive, sustained growth. Under Dr. Kolluru's previous tenure as Vice President for Research, annual R&D expenditures grew by 168%, soaring from $62 million in 2013 to $164 million by 2020. The institution is highly reliant on external grants and industry partnerships, with industry-funded research accounting for roughly a third of its total research funding, placing the university in the top tier nationally for corporate R&D engagement. [1][2][3][4][5][6]
+Because state appropriations are shrinking, the university must aggressively protect its tuition revenue streams. To counteract demographic enrollment cliffs, UL Lafayette participates heavily in the UL System's "Compete LA" initiative, which targets the state's 653,000 adults with some college credit but no degree. The program lowers tuition to a flat rate of $275 per credit hour for returning adults and utilizes the StraighterLine platform to offer competency-based online academy courses. [1][2][3][4][5][6]
+The financial ecosystem is currently navigating heightened compliance scrutiny due to recent audit findings. The Louisiana Legislative Auditor identified instances of misappropriated funds involving LaCarte purchasing cards within the Athletics Department, totaling over $13,000 in misrepresented expenses. While this amount is a fraction of the operating budget, the compliance failure triggered severe internal investigations, mandatory notifications to the District Attorney, and a mandate for stricter internal controls. Consequently, institutional procurement processes are currently risk-averse, requiring prospective technology vendors to explicitly address data governance, automated auditing, and absolute compliance with state reporting standards. [1][2][3][4][5][6]
+6. Grant Intelligence
+The grant landscape at UL Lafayette is dominated by substantial, multi-year federal funding from the National Science Foundation (NSF), the National Institutes of Health (NIH), the Department of Energy, and the Department of Defense. The university's research portfolio is heavily skewed toward hard sciences, engineering, data informatics, and advanced medical research, reflecting its status as an R1 institution.
+Federal funding consistently flows into interdisciplinary projects that merge computer science with physical systems and public health. Dr. Raju Gottumukkala, the Director of Research for the Informatics Research Institute, has generated over $7 million in funding from various state and federal agencies to support big data platforms, visual analytics, and cyber-physical system resilience. Dr. Xiali Hei, a leading faculty member in computer science, recently secured a $1.13 million NSF Major Research Instrumentation (MRI) grant to build a cyber-physical security testbed for surgical robots, integrating artificial intelligence security with robotic telesurgery. In the realm of quantum physics, Dr. Olga Kocharovskaya holds multiple continuous NSF grants, including recent awards of $426,000 and $582,000, for her pioneering research in quantum X-ray optics and ultra-narrow nuclear resonances. [1][2][3][4][5][6]
+The New Iberia Research Center (NIRC), the nation's largest academically affiliated primate laboratory, is a massive recipient of NIH funding. Recent awards include a $2.2 million contract for the operation of nonhuman primate breeding colonies and a $434,000 grant for nonhuman primate immune reagents. These grants support critical translational research, including the development of advanced hydrogel vaccines and studies on infectious diseases like SIV and COVID-19.
+Principal Investigator
+Department / Center
+Granting Agency
+Focus Area
+Recent Award Value (Approx.)
+Dr. Xiali Hei
+Computer Science / CMIX
+NSF (MRI)
+Cyber-physical security for surgical robots
+$1.13 Million
+Dr. Raju Gottumukkala
+Informatics / CVDI
+NSF, DHS, DOE
+Visual analytics, big data, AI in healthcare
+>$7.0 Million (Cumulative)
+Dr. Olga Kocharovskaya
+Physics
+NSF, AFOSR
+Quantum X-ray optics, nuclear resonances
+$1.0+ Million (Cumulative)
+NIRC Leadership
+New Iberia Research Center
+NIH, OD
+Primate breeding, translational vaccine research
+$2.2 Million / $434k
+
+Despite this massive success in securing funds, the administration of these grants presents a profound institutional challenge. For five consecutive years, the Louisiana Legislative Auditor has cited the university for failing to properly monitor key personnel effort and subrecipient compliance within the federal Research and Development (R&D) Cluster. Auditors found that key personnel were not involved in projects at the required levels, and the university lacked adequate time and effort certifications to verify compliance. This recurring vulnerability indicates a friction point between the rapid expansion of research volume and the administrative infrastructure's ability to track disparate data compliantly. [1][2][3][4][5]
+7. Innovation Ecosystem
+UL Lafayette's innovation ecosystem is designed to function as an economic development engine for the Acadiana region and the broader State of Louisiana. The ecosystem relies heavily on public-private partnerships, technology transfer, and the commercialization of applied computing research.
+The cornerstone of this ecosystem is the Center for Visual and Decision Informatics (CVDI), an NSF Industry-University Cooperative Research Center co-founded with Drexel University. Directed by Dr. Vijay Raghavan and managed locally by Dr. Raju Gottumukkala, CVDI partners with over forty industry entities—including CGI, Johnson & Johnson, Capital One, and Northrop Grumman—to develop next-generation visual analysis and predictive analytics tools. [1][2][3][4][5]
+Building on this foundation, the university recently established the Accessible Healthcare through AI-Augmented Decisions (AHeAD) Center, also directed by Dr. Gottumukkala, which focuses on implementing artificial intelligence to improve healthcare diagnostics and operational efficiency. Furthermore, the National Incident Management Systems and Advanced Technologies (NIMSAT) Institute manages the Louisiana Business Emergency Operations Center, utilizing advanced data modeling to enhance supply chain resilience and disaster management in collaboration with the private sector. [1][2][3][4][5]
+Corporate partnerships are deeply intertwined with the university's physical and economic footprint. CGI, a global information technology firm, established a major 50,000 square-foot technology center within the university's Research Park, driving hundreds of high-wage jobs in the region. The university also maintains robust talent and research pipelines with regional healthcare anchors like LHC Group, Ochsner Lafayette General, and Acadian Ambulance, aligning academic program output directly with regional workforce demands. [1][2][3][4][5]
+Innovations succeed at UL Lafayette when they demonstrate direct commercial viability or immediate public impact. There is immense institutional support for projects that attract federal instrumentation grants and industry co-sponsorship, bridging the gap between theoretical computer science and deployable enterprise solutions.
+8. Student Success Intelligence
+UL Lafayette defines student success through a matrix of strict, measurable key performance indicators that are explicitly tied to SACSCOC reaffirmation requirements and Board of Regents performance funding formulas. The university recognizes that retaining students is not merely an academic mandate, but a financial necessity to offset fluctuating state appropriations.
+The focus of the university's student success apparatus is primarily directed at early intervention and gateway persistence. First-to-second-year retention for full-time, degree-seeking freshmen sits at a baseline of approximately 74%. The institution has established a strategic goal to drive this metric to a minimum acceptable threshold of 74%, with an ambitious stretch goal of 80% by 2030. First-to-third-year retention presents a steeper challenge, dropping to approximately 60%, with a strategic goal of reaching 68%.
+Cohort Metric
+Baseline (Recent Average)
+Strategic Goal (2029/2030)
+1st to 2nd Year Retention
+74.28%
+80.00%
+1st to 3rd Year Retention
+60.66%
+68.00%
+Six-Year Graduation Rate
+57.30%
+63.70%
+
+To evaluate the qualitative dimensions of student success, the university relies on data from the National Survey of Student Engagement (NSSE). This data tracks perceived gains in critical thinking, writing clearly, working effectively with others, and analyzing numerical information. The university also heavily monitors licensure exam pass rates across disciplines such as nursing, athletic training, and education, using these outcomes to validate program effectiveness. [1][2][3][4]
+Despite clear goals, the operating model for student success faces structural headwinds. While the university effectively captures macro-level enrollment data through its census dates, the granular, day-to-day tracking of student engagement required to achieve an 80% retention rate is highly dependent on faculty compliance with early alert systems. [1][2][3][4]
+9. Advising Ecosystem
+The advising ecosystem at UL Lafayette relies on a constellation of software systems integrated through a central university portal (ULink), but the workflow is inherently hindered by siloed execution, a major structural transition point, and manual data entry requirements. [1][2][3][4]
+The 60-Credit Handoff:
+The most critical structural feature of the advising ecosystem is the bifurcation of student ownership. The Academic Success Center (ASC) serves as the centralized hub for academic advising, but its mandate is limited. The ASC employs professional advisors and upper-class peer mentors to guide first-year students, biology majors, management majors, and the general population of students who possess 60 credit hours or less. Once a student crosses the 60-credit threshold, advising ownership is transferred entirely to the Dean’s office of their new major, where faculty members take over all advising and mentorship duties. This hard transition creates a significant data continuity risk; professional advisors utilize specialized tracking methodologies, while faculty advisors are primarily incentivized by research and teaching, leading to inconsistent administrative documentation of student progress.
+Technology and Workflow:
+The technology stack relies heavily on the Ellucian suite. Ellucian Banner serves as the core student information system for registration and records, while Ellucian Degree Works provides web-based academic planning and degree auditing. For retention interventions, the university utilizes CRM Advise, locally branded as Student Success Manager. [1][2][3][4]
+The workflow for identifying at-risk students requires manual initiation. When a faculty member observes a student struggling—due to failed exams or excessive absences—they must proactively log into ULink, navigate to the Student Success Manager card, and open their class roster. From there, the faculty member selects the student, chooses a predefined alert category (e.g., "At Risk in Class", "Excessive Absences"), inputs manual notes justifying the alert, and submits the form. [1][2][3][4]
+This alert is then routed to the student's assigned advisor—either the ASC for lower-division students or a faculty advisor for upper-division students. The primary weakness in this ecosystem is the lack of automated, predictive triggers. The system does not appear to automatically ingest real-time gradebook data or attendance metrics from the learning management system to flag students before failure occurs. Because the system relies entirely on faculty remembering to log into a separate CRM module to submit manual alerts, the predictive capability of the software is severely limited by human compliance. [1][2][3][4]
+10. Institutional Reporting
+UL Lafayette is subject to rigorous and overlapping accountability matrices from state, federal, and accrediting bodies. The production of accurate, timely data is essential for preserving the university's operational authority and funding. [1][2][3][4]
+The Southern Association of Colleges and Schools Commission on Colleges (SACSCOC) represents the primary accrediting body. The university's accreditation was recently reaffirmed (Class of 2030), though maintaining this status requires continuous reporting on institutional effectiveness and student achievement. The university must conclusively prove that its Quality Enhancement Plan (Advance) is resulting in measurable improvements in student learning outcomes, necessitating the tracking of undergraduate research engagement and behavioral transfer. SACSCOC reviewers closely scrutinize the extent to which continuous improvement loops are actively driven by faculty engagement rather than merely administrative compliance. [1][2][3][4]
+State reporting is mandated by the Louisiana Board of Regents, which utilizes the Statewide Student Profile System to track headcount, retention, and graduation metrics. This data directly informs performance funding formulas. [1][2][3][4]
+The most critical reporting vulnerability lies in federal grant compliance, as audited annually by the Louisiana Legislative Auditor (LLA). For five consecutive years, the LLA has cited UL Lafayette for noncompliance in Special Tests and Provisions relating to personnel effort on federal Research and Development awards. Auditors found that the university lacked adequately designed controls to monitor key personnel, resulting in failures to verify that required effort levels were met on federal grants. These reporting delays and audit findings stem directly from decentralized, manual data entry. The institutional weakness lies in the space between human behavior—whether a researcher submitting a time-and-effort certification or a faculty advisor logging an intervention—and enterprise data capture. [1][2][3][4]
+11. Research Commercialization
+The commercialization of research at UL Lafayette represents a highly successful pillar of its economic development mission. Under the sustained leadership of Dr. Kolluru, the university's innovation output expanded exponentially, transforming intellectual property into regional economic assets.
+The university achieved a 1200% increase in patents issued, propelling UL Lafayette into the National Academy of Inventors' Top 100 U.S. Universities for patents. The institution successfully licenses technology and spins out startups, heavily supported by its integration with the local Opportunity Machine incubators and Louisiana Economic Development initiatives. Industry-sponsored research is a cornerstone of this success; the university ranks among the top ten institutions nationally for the percentage of its research funding derived from corporate partnerships. This deep integration ensures that research commercialization is not merely an academic exercise but a responsive pipeline addressing real-world industry demands in energy, healthcare informatics, and defense technologies.
+12. Faculty Network Analysis
+Influence at UL Lafayette is heavily concentrated among faculty who secure center-level grants, direct interdisciplinary institutes, and generate external revenue. These individuals function as enterprise managers and exert profound influence over institutional technology strategies.
+Dr. Raju Gottumukkala sits at the center of the university's data science and informatics network. As the Director of Research for the Informatics Research Institute, the Site Director for NSF CVDI, and the Director of the AHeAD Center, his collaborations span smart healthcare, big data analytics, and city-level economic development via US Ignite. He is a primary institutional node for any strategic discussions involving artificial intelligence or data-driven software architecture. [1][2][3][4]
+Dr. Xiali Hei leads the vanguard of the university's cybersecurity research. As the principal investigator on major NSF cyber-physical systems grants, she orchestrates multidisciplinary teams across computer science, electrical engineering, mechanical engineering, and nursing to secure complex robotic systems.
+Dr. Vijay Raghavan, the Director of CVDI, serves as the critical liaison between UL Lafayette's academic researchers and over forty corporate industry partners, driving the commercial and practical application of visual informatics. In the physical sciences, Dr. Olga Kocharovskaya maintains a robust network of continuous federal funding for her work in quantum X-ray optics, frequently collaborating with national laboratories. [1][2][3][4]
+Because these influential faculty members possess advanced expertise in data architecture, machine learning, and complex systems design, they hold the university's internal IT infrastructure and prospective software procurements to exceptionally high technical standards. [1][2][3][4]
+13. Institutional Relationships
+UL Lafayette does not operate in isolation; it is deeply embedded in regional and state-level economic and governance networks.
+The university is a premier institution within the University of Louisiana System, coordinating closely with System President Dr. Jim Henderson on broad educational initiatives. The most notable shared initiative is "Compete LA," a system-wide effort to re-enroll the 653,000 adults in Louisiana who have some college credit but no degree. Through this initiative, the university partners with StraighterLine, a private educational technology company, to provide competency-based online academy courses and personalized coaching, aligning academic offerings with the needs of non-traditional, working adults. [1][2][3][4]
+Locally, the university maintains strategic alignment with the Lafayette Economic Development Authority (LEDA) and regional healthcare conglomerates like Ochsner Lafayette General and LHC Group. These recurring collaborations ensure that the university's academic and research output remains tightly coupled to the workforce and technological needs of Acadiana. [1][2][3][4]
+14. Student Voice
+While direct student feedback forums are diffuse, recurring student pain points can be heavily inferred from the university's systemic advising architecture and strategic interventions. The structural handoff at 60 credit hours creates a fragmented student experience. First- and second-year students receive high-touch, professional advising through the Academic Success Center, but upper-division students must navigate degree planning and career preparation through faculty advisors who are simultaneously balancing research and teaching loads.
+This dynamic likely leads to administrative complexity regarding registration errors, hold resolutions, and degree auditing, directly threatening the university's strategic goal of raising the six-year graduation rate. The introduction of the Compete LA Academy highlights a separate, non-traditional student voice, one that demands flexible, asynchronous learning models, immediate credit transfer evaluations, and financial affordability over traditional campus engagement metrics. [1][2][3][4]
+15. News Intelligence
+An analysis of significant institutional events over the past five years reveals a clear trajectory toward research dominance, followed by an immediate pivot to fiscal consolidation and compliance.
+Year
+Event
+Strategic Significance & Institutional Priority
+2021
+UL Lafayette achieves Carnegie R1 status.
+Culmination of a decade of strategic research expansion; establishes the university as a top-tier national research entity.
+2022
+Launch of CVDI Phase II with NSF Funding.
+Solidifies dominance in big data, AI, and visual informatics; links academia directly to corporate defense and healthcare.
+2023
+Launch of "Vision. Louisiana." Strategic Plan.
+Sets explicit targets for 2030 (16,878 enrollment, 80% retention); shifts focus to holistic student success.
+2024
+Reaffirmation of R1 Status; Expansion of AHeAD.
+Validates the sustainability of the research enterprise; integrates AI directly into regional healthcare.
+2025/2026
+Dr. Ramesh Kolluru appointed President.
+Leadership shifts to a data-scientist architect; signals a future defined by operational efficiency and technological integration.
+2025/2026
+LLA Audit Findings & NIRC Controversy.
+Public exposure of internal control weaknesses regarding grant tracking and purchasing cards; requires immediate crisis management and compliance overhauls.
+
+16. Competitive Benchmarking
+UL Lafayette competes vigorously within the University of Louisiana System and against regional R1 institutions.
+In terms of student success, UL Lafayette's first-to-second-year retention rate hovers around 74%. While this performance exceeds the UL System average—which has trended downward from 71.2% in 2022 to 69.8% in 2024—it lags behind top-tier national R1 peers. This gap has prompted the university's aggressive strategic goal of achieving 80% retention by 2029. Similarly, the six-year graduation rate of approximately 52-54% requires systemic intervention to reach the target of 63.7%. [1][2]
+Conversely, UL Lafayette vastly outperforms its regional in-state peers (excluding LSU Baton Rouge) in research and commercialization. By growing research expenditures to $164 million, securing a top 100 ranking for patents, and placing in the top 10 nationally for industry-funded research, the university has firmly established itself as the premier technological innovation hub within the UL System.
+Metric
+UL Lafayette Performance
+Peer/System Context
+Strategic Trajectory
+1st-to-2nd Year Retention
+~74.0%
+UL System Avg: 69.8%
+Aggressive growth targeted (80%)
+Six-Year Graduation Rate
+~52-54%
+Regional R1 Peers: Higher
+Systemic interventions required (63.7% goal)
+Research Expenditures
+$164 Million
+UL System: Leading
+Sustained, explosive growth
+Adult Learner Re-engagement
+High (Compete LA)
+State-wide initiative
+Expanding via online competency models
+
+17. Opportunity Mapping
+Evaluating the proposed introduction of a student-centered advising and success platform against the verified institutional intelligence yields a highly nuanced opportunity matrix. To succeed, a vendor must bypass or augment the existing Ellucian CRM Advise system by addressing specific structural and data vulnerabilities.
+| Identified Institutional Problem | Strategic Alignment & Evidence | Stakeholders | Implementation Risks & Dependencies | Alignment Strength |
+| :--- | :--- | :--- | :--- | :--- |
+| Bifurcated Advising Handoff (The 60-Credit Drop-off) | The ASC handles students <60 credits; faculty handle >60 credits. This divide causes data loss and inconsistent tracking, threatening the 63.7% graduation goal. | Provost Hebert, Exec. Dir. Beth Giroir, Deans. | Faculty resistance to adopting new software; integration dependencies with Banner and Degree Works. | STRONG. Directly solves a structural retention leak aligned with strategic goals. |
+| Manual Early Alert Bottleneck | CRM Advise requires faculty to proactively log into ULink and manually submit alerts. Low compliance limits predictive capabilities. | Pres. Kolluru, Exec. Dir. Beth Giroir, CIO. | If the proposed platform does not automate LMS data ingestion, it merely replaces one manual CRM with another. | STRONG. Kolluru's philosophy demands automated, data-driven insights. |
+| Federal Compliance & Effort Tracking | Repeated LLA audit findings regarding failure to track personnel effort on grants. | VP Research Das, Pres. Kolluru, CFO Litolff. | An advising platform does not solve research compliance, but it must feature unimpeachable audit trails to pass procurement scrutiny. | WEAK (for advising software), but vital context for the sales approach. |
+| Adult Learner Reintegration | The state seeks to re-enroll 653,000 adults. Compete LA utilizes StraighterLine for academy courses. | UL System Pres. Henderson, Provost Hebert. | The platform must cater to non-traditional, asynchronous workflows and competency-based pathways. | MODERATE. Compete LA is a system-level initiative requiring broader buy-in. | [1][2]
+Strategic Recommendation:
+A proposed student success platform should not be pitched to UL Lafayette as a standard student engagement or emotional belonging tool. It must be positioned as a Predictive Decision Informatics Engine. When presenting to a President who holds a Ph.D. in Computer Science and founded an NSF Big Data center, the focus must remain entirely on the platform's ability to automate data ingestion from Banner and the LMS, eliminate the manual reporting burden on faculty, provide unbroken longitudinal data across the 60-credit advising handoff, and deliver a provable financial ROI by preserving tuition revenue to offset state budget reductions. [1][2]
+18. Final Evidence Register
+Verified Findings:
+Corroborated Patterns:
+Competing Interpretations:
+Information That Could Not Be Verified:
+Key Assumptions Requiring Validation Before Engagement:
+
+1. https://louisiana.edu/news/dr-ramesh-kolluru-appointed-ul-lafayette-president (Dr. Ramesh Kolluru appointed UL Lafayette president)
+2. https://informaticsinstitute.louisiana.edu/node/315 (Ramesh Kolluru, PhD | Informatics Research Institute - University of Louisiana at Lafayette)
+3. https://louisiana.edu/news/ul-lafayette-launches-new-strategic-plan-vision-louisiana (UL Lafayette launches new Strategic Plan – “Vision. Louisiana.”)
+4. https://thevermilion.net/wp-content/uploads/2025/01/Big-Pdf.pdf (The approved Fiscal Year 2025-26 Capital Outlay Budget to improve the University - The Vermilion)
+5. https://academicaffairs.louisiana.edu/sites/academicaffairs/files/New%20Faculty%20Orientation%20Combined%20Presentations_%20August%202024_Final_Compressed.pdf (Welcome to - Academic Affairs)
+6. https://lla.la.gov/publicreports.nsf/0/88ad35f8498a4abb86258e11005da980/$file/summary0000ab62a.pdf (University of Louisiana at Lafayette - Legislative Auditor)
+7. https://www.researchgate.net/profile/Ramesh-Kolluru-5 (Ramesh KOLLURU | University of Louisiana at Lafayette - ResearchGate)
+8. https://informaticsinstitute.louisiana.edu/node/315 (Ramesh Kolluru, PhD | Informatics Research Institute - University of Louisiana at Lafayette)
+9. https://edtechmagazine.com/higher/article/2014/10/edtech-interview-ul-lafayettes-ramesh-kolluru (EdTech Interview: UL Lafayette's Ramesh Kolluru)
+10. https://edtechmagazine.com/higher/article/2014/10/edtech-interview-ul-lafayettes-ramesh-kolluru (EdTech Interview: UL Lafayette's Ramesh Kolluru)

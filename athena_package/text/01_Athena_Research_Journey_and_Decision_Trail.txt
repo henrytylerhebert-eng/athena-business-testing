@@ -1,0 +1,109 @@
+Athena Research Journey and Decision Trail
+
+How each question led to the next
+
+1. Original thesis
+
+Starting point
+
+Athena begins with a student-empowerment idea: students should understand where they are, what comes next, and when they need help.
+
+What changed
+
+The concept initially risked being too broad. “Student advising” contains many users, workflows, systems, and institutional buyers.
+
+Question created
+
+What exact student problem is painful, frequent, measurable, and suitable for a small test?
+
+2. Reconstruct the advising problem
+
+Starting point
+
+Research reframed the problem from lack of information to lack of usable decision clarity. Students already have portals, audits, emails, policies, and advisors—but must synthesize them.
+
+What changed
+
+The product hypothesis narrowed toward translation and prioritization rather than another system of record.
+
+Question created
+
+Which student segment experiences the strongest combination of pain, urgency, actionability, and measurable consequence?
+
+3. Compare student segments
+
+Starting point
+
+The analysis compared first-year students, first-generation students, student athletes, transfer students, major changers, probation students, and near-graduation students.
+
+What changed
+
+Transfer students emerged as the strongest general segment because credit applicability, fragmented records, and time-sensitive registration decisions create visible consequences.
+
+Question created
+
+Can this segment be narrowed enough to test in one semester at a real institution?
+
+4. Validate at UL Lafayette
+
+Starting point
+
+Institutional research mapped UL Lafayette leadership, advising handoffs, Banner, DegreeWorks, ULink, Student Success Manager, transfer-credit processes, and procurement constraints.
+
+What changed
+
+The broad transfer segment narrowed to first-semester transfers with 30–60 credits and at least one unresolved equivalency or fallthrough credit.
+
+Question created
+
+What is the smallest product and smallest data footprint that can test the behavior?
+
+5. Define the smallest useful experience
+
+Starting point
+
+The work converged on three panels: My Position, My Next Three Moves, and My Blockers, with advisor-verified actions and no automated academic decisions.
+
+What changed
+
+This is a decision-clarity layer, not a replacement for advisors, Banner, DegreeWorks, or professional judgment.
+
+Question created
+
+Can a concierge prototype or secure extract improve accuracy, speed, confidence, and completion of one correct action?
+
+6. Design the pilot
+
+Starting point
+
+The proposed progression is baseline observation, prototype usability testing, then a behavioral pilot during a registration advising window.
+
+What changed
+
+The core proof is behavioral: can the student identify and complete the right next action with fewer corrections and less system switching?
+
+Question created
+
+Which go-to-market entry point should be tested first, and what desirability evidence is required before building?
+
+7. Reopen the customer question
+
+Starting point
+
+Later discussion introduced community colleges and university recruiters as potentially faster, lighter-weight entry points.
+
+What changed
+
+These are credible strategic options, but they represent different customers, workflows, data, and value propositions.
+
+Question created
+
+Which option best preserves Athena’s core thesis while creating the fastest credible learning loop?
+
+The logic in one line
+
+Broad student empowerment → advising decision clarity → transfer-student pain → UL Lafayette workflow → minimal student view → concierge/extract pilot → compare entry markets without losing the core thesis.
+
+Important interpretation boundary
+
+The source reports mix directly sourced facts, institution-reported practices, literature-based findings, and strategic inference. The evidence register should be used before treating any strategic conclusion as established fact.

@@ -1,0 +1,373 @@
+UL Lafayette Student Advising Validation Study and Read-Only Student Path Agent
+Deliverable 1: Executive Verdict
+Based on an exhaustive analysis of the University of Louisiana at Lafayette (UL Lafayette) academic advising infrastructure, current institutional policies, and behavioral economics research, the primary hypothesis is partially validated and must be narrowed (Inference).
+The core product hypothesis—that a student-centered view of current position, next actions, deadlines, and blockers can improve the ability to act—is strongly supported by peer-reviewed behavioral evidence indicating that structural complexity and cognitive overload, rather than mere information deficits, cause advising friction. However, the proposed initial segment (first-semester transfer students with 24–75 credits) is too broad. The segment must be narrowed specifically to first-semester transfer students with 30–60 credits who have at least one unresolved transfer equivalency requiring departmental review, such as fallback elective credits coded as ELEC 1xx (Inference). [1][2][3][4]
+The integration hypothesis is validated (Inference). The experiment can operate without direct production write-access. A read-only agent extracting approved, limited data fields from Banner (e.g., the SOAHOLD and SOACURR tables) and DegreeWorks via secure scheduled extracts is sufficient to test behavioral changes within a single semester. Direct integration via Ellucian Ethos APIs is technically feasible but introduces unnecessary security and governance delays for an initial pilot (Institution-reported practice). More internal evidence is required regarding the exact latency between the Transfer Evaluation System (TES) and DegreeWorks updates to ensure the agent does not present stale data. [1][2][3][4]
+Part I: Hypotheses to Validate or Invalidate
+Primary Student-Segment Hypothesis
+The candidate hypothesis targets first-semester transfer students with 24–75 accepted credits. Analysis indicates that while this is a high-pain segment, the 24–75 credit range introduces confounding variables (Inference). Transfer students with fewer than 30 credits face challenges largely identical to first-time freshmen and are frequently routed through standard onboarding interventions such as UNIV 100. Conversely, students with more than 60 credits often require highly individualized faculty-advisor overrides and substitutions that defy deterministic automation. [1][2][3][4]
+The optimal range is 30–60 accepted credits (Inference). This range captures students who possess significant collegiate experience, often bringing an associate degree or equivalent progress, where the applicability of credits to specific UL Lafayette majors is the primary friction point causing delays. The distinction between transferability (institutional acceptance of credit) and applicability (credit satisfying specific degree requirements) is where students accumulate excess credits and incur financial penalties (Peer-reviewed evidence). [1][2][3][4]
+When compared against alternative populations, first-time freshmen experience high confusion but benefit from highly structured, mandatory interventions and uniform tracking via the Student Success Manager (SSM). Students nearing graduation face high-severity consequences but experience a low frequency of routine confusion, as their degree paths have been repeatedly audited in DegreeWorks over several years. First-semester transfer students with 30–60 credits face maximal information fragmentation. Their data is split across previous transcripts, TES, Transferology, Banner SOAHOLD, and manual processing queues in DeClouet Hall. This segment offers the highest potential for measurable improvement in one semester (Inference). [1][2][3][4]
+Core Product and Behavioral Hypotheses
+The hypothesis that a simplified view will result in faster, correct action completion is conceptually sound. Recent randomized controlled trials (RCTs) in higher education demonstrate that low-touch "nudges" (e.g., text message reminders) fail when students encounter complex institutional barriers or ambiguous benefits. Conversely, interventions that translate complex administrative status into distinct, actionable steps reduce cognitive overload and drive action (Peer-reviewed evidence). If the agent reliably synthesizes fragmented data into a clear view, the behavioral hypothesis is supported by current literature. [1][2][3][4]
+Core Advising and Data Hypotheses
+The advising hypothesis—that better-prepared students reduce basic advisor workload—is conditionally validated (Inference). UL Lafayette operates a hub-and-spoke advising model balancing the Academic Success Center in Lee Hall with faculty advising within specific colleges, such as the School of Biological Sciences. Faculty advisors often resist developmental advising due to time constraints, preferring to focus on career mentorship (Advisor-reported experience). Automating routine status checks will transfer advisor time from administrative reconstruction to professional judgment. [1][2][3][4]
+The data hypothesis—that existing systems contain enough authoritative data—is partially validated. Banner and DegreeWorks hold sufficient official records. However, transfer credit processing latency, which takes between three days and three weeks in University College, means the system of record may temporarily contain stale data compared to the student's actual transcript (Institution-reported practice). [1][2][3][4]
+Core Integration Hypothesis
+A read-only agent can validate data without write access. UL Lafayette utilizes Banner and DegreeWorks; read-only access to Banner tables, specifically SPRIDEN for identity, SOAHOLD for holds, and SOACURR for curriculum, alongside DegreeWorks XML/JSON audit outputs, can populate the student view without risking production system integrity (Official vendor verified). [1][2][3][4]
+Part II: Institutional Context and Primary Decision Questions
+Student and Problem Analysis
+The student segment experiencing the greatest amount of avoidable advising uncertainty that can be improved within one semester is the cohort of first-semester transfer students awaiting departmental evaluation of elective credits (Inference). This uncertainty becomes most consequential approximately two weeks before the registration time ticket opens, which is when advising holds (SOAHOLD) must be lifted. At this moment, the student is trying to make a highly consequential decision: which exact courses to register for that apply directly to degree requirements, avoiding the accumulation of wasted credits that extend graduation timelines and deplete Pell Grant lifetime eligibility. [1][2][3][4]
+To make this decision, the student must assemble previous transcripts, TES evaluations, their DegreeWorks audit, their major curriculum sheet, and their current hold status. Professional advising judgment is strictly required for approving course substitutions, such as overriding a requirement using an unmatched transfer course, adjudicating academic amnesty decisions, and providing career mentorship (Institution-reported practice). Routine tasks include identifying holds, locating the advisor's contact information via ULink, checking the registration time ticket, and verifying prerequisites. When confused, students currently self-advise incorrectly, accumulate excess credits, or abandon the registration attempt until late, incurring a $50 late registration fee (Student-reported experience). These errors produce measurable consequences before the semester ends, primarily through the accumulation of fallthrough credits and failure to enroll for the subsequent term. [1][2][3][4]
+Existing Systems Capability
+DegreeWorks already solves the problem of the degree audit, tracking completed versus outstanding requirements based on the student's catalog year. Banner serves as the core system of record, containing student identity, curriculum, grades, holds, and financial data (UL Lafayette verified). ULink distributes access to registration, financial aid notices, Student Success Manager (SSM) grade alerts, and basic advisor assignments across separate cards and workflows. [1][2][3][4]
+What remains unavailable or difficult to interpret is the exact departmental status of pending transfer credits and a unified, prioritized list of next actions. Students fail because of poor information design and the failure to translate requirements into sequential actions, not because the information is entirely absent (Peer-reviewed evidence). Advisors frequently use additional information that students cannot easily synthesize, such as internal faculty notes, the TES backend, and departmental Blue Advising Forms. Advising notes are recorded in a somewhat fragmented manner; while the Student Success Manager (SSM) and ULink systems are utilized, faculty departments sometimes retain physical or internal digital folders. The authoritative source for transfer-credit applicability resides with the Office of the University Registrar in conjunction with Academic Colleges. When information conflicts, Banner is the ultimate authoritative system. [1][2][3][4]
+Data and Agent Feasibility
+The minimum data an agent would require includes a pseudonymous identifier, major, hold codes, DegreeWorks completion percentage, and the assigned advisor's name. Data can be accessed through approved APIs, such as the Ethos Integration Hub for Banner, but establishing institutional API provisioning typically requires extensive security reviews. Alternatively, data could be supplied through scheduled institutional extracts, as the Banner operational data store (ODS) and Institutional Research (IR) reports can provide daily CSV or JSON extracts (Official vendor verified). Course substitution approvals and nuanced degree applicability determinations would require manual advisor validation. Hold data must be current within 24 hours, while degree progress can tolerate weekly refreshes. Detailed financial aid information, disability records, and disciplinary files are too sensitive and entirely unnecessary for this experiment. The experiment could absolutely operate without direct production-system integration by utilizing secure extracts (Inference). [1][2][3][4]
+Experiment Design
+The smallest test that could produce decision-grade evidence in one semester is a 40-student randomized controlled trial during the registration advising window (October or March). The comparison condition should be students navigating the standard ULink and DegreeWorks portals without the agent's assistance. Reliable outcomes to measure include the time taken to clear the advising hold and the percentage of registered credits applying directly to the degree plan. A statistically significant reduction in fallthrough credits and faster hold clearance would support expansion (Peer-reviewed evidence). The hypothesis would be invalidated if the agent requires constant manual correction by advisors due to edge-case transfer rules or latency between institutional systems. [1][2][3][4]
+Deliverable 3: Current-State Advising Journey
+The following maps the complete current-state journey for a new transfer student from admission through second-semester registration, revealing critical discrepancies between the formal process and the lived process (Institution-reported practice / Inference).
+Step
+Student Action
+Advisor/Staff Action
+System
+Expected Timing
+Common Delay / Error
+Data Needed by Agent
+Measurable
+1. Admission
+Accepts offer, sends official transcripts.
+Admissions processes files and routes to Registrar.
+Banner
+2-4 weeks prior to term.
+Missing partial transcripts.
+Entry type, Term, Major.
+No
+2. Transcript Eval
+Waits for University College / Registrar review.
+Evaluates direct vs elective (ELEC 1xx) equivalents.
+Banner / TES
+3 days to 3 weeks.
+Departmental review bottleneck.
+Eval status, Fallthrough credits.
+Yes
+3. Orientation
+Registers for Transfer Orientation. 
+SOUL Camp / Orientation staff verify attendance.
+Orientation System
+November (Spring) / April (Fall).
+Student skips, incurs orientation hold.
+Orientation status.
+Yes
+4. Advising Appt
+Locates advisor in ULink; schedules appt.
+Reviews DegreeWorks, prepares Blue Form.
+ULink / Email / SSM
+1-3 weeks pre-registration.
+Student unaware of advisor name or appointment process.
+Advisor name, Appt date, Advising period.
+Yes
+5. Course Selection
+Reviews catalog, attempts to align transfer credits.
+Translates ELEC 1xx to major requirements.
+DegreeWorks
+During appointment.
+Translating prerequisites, cognitive overload.
+Degree progress, Blockers, Prerequisites.
+Yes
+6. Hold Removal
+Requests hold clearance post-meeting.
+Removes SOAHOLD in Banner (Code AD).
+Banner (SOAHOLD)
+Post-advising.
+Advisor forgets to lift hold; student cannot register.
+Advising hold status.
+Yes
+7. Registration
+Registers via ULink on assigned time ticket.
+Intervenes only if errors occur.
+Banner / ULink
+Registration window.
+Prerequisite errors, missing ticket, late fees.
+Time ticket, Reg state, Errors.
+Yes
+8. Semester End
+Completes enrolled courses.
+Submits final grades, SSM alerts.
+Banner / Moodle
+Finals week.
+Student fails prerequisite for next sequence.
+Enrolled courses, Grades.
+Yes
+
+A significant discrepancy exists between the formal process, which implies transfer credits are evaluated well before advising, and the lived process. Evaluations can take up to three weeks, often forcing students to be advised with incomplete degree audits, leading to avoidable course duplications and advisor frustration (Advisor-reported experience). [1][2][3][4]
+Deliverable 4: Pain-Point Priority Map
+Pain points are ranked by frequency, severity, actionability, time sensitivity, and suitability for the proposed agent.
+Deliverable 2: UL Lafayette Student-Segment Ranking
+The segments were scored using the provided decision model: ⁠Segment opportunity [span_76](start_span)[span_76](end_span)= pain severity × decision urgency × actionability × measurement speed × institutional value ÷ implementation complexity and confounding risk⁠. The Louisiana Board of Regents outcomes-based funding formula heavily weights progression and transfer success, rendering transfer students a highly valuable institutional segment (Government or regulatory source).
+Rank
+Candidate Segment
+Impact
+Implementation
+Score
+Evidence & Confidence
+Recommended Sample
+1
+Transfer Students (30-60 credits)
+High
+Moderate
+8.5
+Highest credit loss rate (43% avg). High institutional funding value. (Confidence: High)
+40-50
+2
+First-time Freshmen (Second Semester)
+Medium
+Easy
+7.2
+High frequency, but low complexity. Already served by UNIV 100. (Confidence: High)
+N/A
+3
+Students Changing Majors
+High
+Hard
+5.8
+High pain, but massive complexity in catalog year overrides and prerequisite cascades. (Confidence: Medium)
+N/A
+4
+Academic Warning / Probation
+High
+Hard
+4.5
+High urgency, but heavy confounding factors (mental health, finance, SAP appeals). (Confidence: High)
+N/A
+5
+Students Nearing Graduation
+High
+Moderate
+4.0
+Low frequency of confusion; high severity. Not actionable enough for a rapid pilot. (Confidence: Medium)
+N/A
+
+First-semester transfer students with 30-60 credits represent the strongest initial segment. Their primary decision moment occurs just before their first UL Lafayette registration period. [1][2][3]
+Deliverable 5: Existing-System Capability Matrix
+System Name
+Canonical Owner
+Existing Functionality
+System of Record
+Access Method
+Limitations & Unverified Capabilities
+Banner Student
+Registrar
+Holds (SOAHOLD), Curriculum (SOACURR), Identity (SPRIDEN).
+Yes
+Ethos API / DB Extract
+Complex underlying relational tables; API provisioning is historically slow (Unverified).
+DegreeWorks
+Institutional Effectiveness
+Degree audit, requirement tracking, Scribe block evaluation.
+No (Reads Banner)
+XML/JSON export or API
+Can be slow to reflect manual substitutions; syntax parsing errors.
+ULink
+IT / Enterprise Apps
+Portal for registration dashboard, financial aid notices, grades.
+No
+SSO / LTI
+Distributed UI; requires multiple clicks across separate cards.
+Student Success Manager (SSM)
+Academic Success Center
+Early alerts, grade checks, retention tracking.
+No
+API / Extract
+Reliant on faculty compliance for data entry; inconsistent usage.
+Transfer Evaluation System (TES)
+Admissions / Registrar
+Database of external equivalencies.
+No
+N/A (Public UI)
+Does not track individual student status; solely a reference catalog.
+
+Deliverable 6: Highest-Return Data Dictionary
+The Data ROI Formula was applied to candidate fields. Strict data minimization protocols aligning with FERPA guidelines must be observed to limit exposure of personally identifiable information (PII).
+Field Name
+Definition
+System of Record
+Validation Rule
+ROI Score
+Inclusion Decision
+Justification
+Advising Hold
+Status of AD hold preventing registration.
+Banner (SOAHOLD)
+If Code = AD, block registration.
+95
+Include
+High actionability; zero privacy risk. Dictates the immediate next step.
+Time Ticket
+Student's designated registration window.
+Banner
+Time < Current Time = Eligible.
+90
+Include
+Highly actionable; prevents late fees.
+Assigned Advisor
+Name of faculty/professional advisor.
+Banner
+Must map to active directory.
+85
+Include
+Essential for routing blockers.
+Program/Major
+Declared academic track.
+Banner (SOACURR) 
+Must match catalog string.
+80
+Include
+Frames the context of the DegreeWorks audit.
+Fallthrough Credits
+Credits accepted but not applied to major.
+DegreeWorks
+ELEC 1xx presence > 0.
+88
+Include
+Critical for identifying transfer credit friction and prompting substitution requests.
+Detailed Fin. Aid
+Specific dollar amounts and SAP status.
+Banner
+N/A
+15
+Exclude
+High privacy sensitivity; introduces confounding factors to experiment.
+Course Grades
+Historical GPA / individual grades.
+Banner
+N/A
+30
+Exclude
+Privacy risk exceeds utility for this specific pathfinding experiment.
+
+The included fields are strictly necessary to validate the core behavioral hypothesis—that translating these specific data points into a sequenced action plan improves student follow-through. Excluded fields, such as financial aid details and disciplinary records, carry privacy risks that outweigh their relevance to registration advising. [1][2][3][4]
+Deliverable 7: Agent Architecture Package
+Conceptual Architecture
+The read-only agent operates as a secure middleware layer, processing institutional data without write access to Banner or DegreeWorks, thereby avoiding production system risks. [1][2][3][4]
+Data-Flow Diagram:
+⁠Source Systems (Banner ODS / DegreeWorks) → Scheduled Secure Extract (Nightly SFTP) → Data Normalization Layer → Deterministic Rules Engine → Student Path State → State Representation (Student View & Advisor View) → Experiment Telemetry Database⁠
+Canonical Data Model and Validation Rules
+Deliverable 12: Implementation Sequence
+Three technical pathways present distinct trade-offs for the experiment.
+Model A: Concierge Pilot (No Direct Integration)
+￼ Mechanism: The student or authorized staff provides DegreeWorks exports and ULink screenshots. Researchers manually build the student view.
+￼ Time to deploy: 2-3 weeks.
+￼ Cost/Risk: Low cost, near-zero IT security risk. High burden on researchers.
+￼ Evidence Value: Excellent for usability testing, but poorly suited for a live registration window.
+Model B: Secure Extract Pilot (Limited Integration) - RECOMMENDED
+Model C: API-Connected Pilot (Approved Integration)
+￼ Mechanism: Direct integration via Ellucian Ethos API.
+￼ Time to deploy: 6-12 months.
+￼ Cost/Risk: High implementation effort, stringent security audits, high long-term scalability.
+￼ Recommendation: Do not pursue for the initial single-semester pilot. Institutional IT backlogs will cause unacceptable delays. Pursue only if Model B validates the core behavioral hypothesis.
+Deliverable 8: Experiment Protocol
+Research Question: Does a student-facing path view improve clarity, correctness, and action completion among first-semester transfer students compared to existing systems alone?
+Population and Recruitment: 50 recruited first-semester transfer students with 30–60 credits. Exclusions apply to adult learners over 25, student-athletes (subject to specialized NCAA advising), and fully online students. [1][2][3][4][5][6]
+Comparison Design: A within-subject baseline and prototype test, transitioning into a randomized parallel-group behavioral pilot during the spring or fall registration window (Peer-reviewed evidence). [1][2][3][4][5][6]
+Stage 1: Discovery (Baseline)
+Observe the control group utilizing standard UL Lafayette tools to answer: "What are your next three actions?" Measure time taken, systems opened, and accuracy against a faculty-verified baseline.
+Stage 2: Prototype Test
+Provide the manually prepared agent-generated student view. Compare speed, comprehension, and system switching against the baseline to measure cognitive offloading.
+Stage 3: Behavioral Pilot
+Follow participants through an actual advising window.
+￼ Primary Metric: Percentage of participating students who correctly identify and complete at least one advisor-verified next action (e.g., scheduling an appointment or submitting a substitution form) within seven days.
+￼ Secondary Metrics: Advisor correction count, percentage of registered credits applicable to the degree, and avoidable schedule changes.
+￼ Guardrails: Incorrect recommendation rate (must be 0%), unauthorized access, and actions taken without advising approval.
+￼ Ethical Safeguards: Students can withdraw at any time; standard advising services remain fully accessible to all participants.
+Deliverable 9: Minimum Student View
+The student-facing interface is relentlessly simplified to combat cognitive overload, displaying only verified facts.
+My Position
+￼ Major: Mechanical Engineering (Verified: Banner)
+￼ Transfer Credits Applied: 45 / 60 (Verified: DegreeWorks)
+￼ Time Ticket: Opens April 2, 8:00 AM (Verified: Banner)
+My Next Three Moves
+1. Action: Schedule your mandatory advising appointment.
+￼ Reason: You have an active Advising Hold preventing registration.
+￼ Deadline: Before April 2.
+￼ Verification Status: Automated via Banner. [1][2][3][4][5][6]
+2. Action: Submit a 'Course Substitution Request' for ELEC 1xx.
+￼ Reason: You have 6 transfer credits not currently applying to your major requirements.
+3. Action: Review the Mechanical Engineering sophomore curriculum sheet.
+My Blockers
+￼ Active Hold: Advising Hold (Requires Advisor: Dr. Smith).
+Questions for My Advisor
+￼ "Can my 6 credits of ELEC 1xx from Baton Rouge CC be substituted for the required technical electives?"
+Deliverable 10: Advisor Review Experience
+The interface must seamlessly support the existing "hub and spoke" advising model without requiring faculty to learn a complex new CRM. [1][2][3][4][5][6]
+Student Status Snapshot:
+￼ Student ID: C########
+￼ Proposed Agent Actions: (1) Book Appt, (2) Sub Request.
+Advisor Inputs:
+￼ [ ] Approve Actions
+￼ [ ] Correct/Modify Actions (Text box for explanations)
+￼ [ ] Route Exception to Registrar
+￼ Experiment Telemetry: "Did this summary save you time reconstructing the student's status?" [Yes] [No] [Neutral]
+Deliverable 11: Approval and Governance Roadmap
+The project qualifies as human-subject research designed to produce generalizable knowledge regarding advising interventions. Operating under the FERPA "Studies Exception" (34 CFR 99.31(a)(6)), PII can be disclosed without prior consent to organizations conducting studies for an institution to improve instruction or validate predictive tests, provided a written agreement restricts data use and mandates destruction (Government or regulatory source). [1][2][3][4][5][6]
+Required Approval Sequence:
+Part XIII: Stakeholder Research
+Successful implementation requires mapping the pain points and authority of key institutional stakeholders (Inference / Institution-reported practice).
+Stakeholder
+Role / Data Owned
+Pain Experienced
+Desired Outcome
+Approval Authority
+Academic Success Center
+Manages Student Success Manager (SSM).
+Inconsistent faculty adoption of alerts.
+Higher retention and streamlined triage.
+High (Sponsor)
+Registrar
+Owns Banner (SOAHOLD, SOACURR) and transcript evaluation.
+Manual processing bottlenecks in DeClouet Hall.
+Reduced errors in course scheduling.
+High (Data Steward)
+Institutional Research
+Manages data warehouse and reporting.
+Ad-hoc data requests strain capacity.
+Standardized, automated extracts.
+Moderate
+Faculty Advisors
+Execute advising and hold removal.
+Time spent reconstructing degree audits instead of mentoring.
+Better prepared students.
+Low (Users)
+IRB / Research Integrity
+Approves protocols via IRBManager.
+Non-compliant data handling by researchers.
+Strict adherence to FERPA and anonymization.
+High (Regulatory)
+
+Deliverable 13: Decision Memo
+1. Best student segment: First-semester transfer students with 30–60 accepted credits.
+2. Best decision moment: The three-week window preceding the registration time ticket (October/March).
+3. Highest-return data: Banner Hold Status (SOAHOLD), Assigned Advisor, Registration Time Ticket, DegreeWorks Fallthrough Credits (ELEC 1xx).
+4. Smallest useful agent: A read-only, rules-based state tracker processing Model B CSV extracts, translating administrative data into a four-panel "Next Actions" user interface.
+5. Recommended experiment: A 50-student within-subject Prototype Test, followed by a randomized parallel-group Behavioral Pilot during the advising season.
+6. Primary metric: Percentage of students who correctly identify and complete one advisor-verified next action within 7 days.
+7. Guardrails: Zero automated registration execution; zero automated course override approvals. The agent acts strictly as an information synthesizer.
+8. Go/no-go thresholds:
+Final Strategic Question
+What is the smallest UL Lafayette student-facing experience, using the least amount of approved institutional data, that can measurably help the right student understand their position, identify their next three actions, and complete one correct action within a single semester?
+The absolute minimum viable experience is a Concierge/Extract Hybrid Web View deployed to a cohort of 50 first-semester transfer students (30–60 credits). It requires only three specific data endpoints:
+By feeding these three variables into a deterministic logic engine, the agent can output a highly accurate, plain-language checklist: "You have an advising hold. Your time ticket is in 14 days. You have 6 transfer credits that require departmental review. Action 1: Book Advisor (Link). Action 2: Ask about your 6 unapplied credits."
+This requires zero real-time API integrations, bypasses complex IT security bottlenecks, limits data exposure strictly to non-sensitive academic progression metrics under FERPA guidelines, and directly targets the cognitive overload that literature proves causes transfer student credit loss. The institution should absolutely not recommend building a broader, highly integrated advising platform until this fundamental translation function is proven to drive behavioral change in a controlled, single-semester pilot.
+
+1. https://ideas.repec.org/f/c/pca1332.html (Ben Castleman - IDEAS/RePEc)
+2. https://files.eric.ed.gov/fulltext/ED627995.pdf (Experimental Evidence on Intensive Advising and College Success - ERIC)
+3. https://www.edresearch.edu.au/summaries-explainers/explainers/managing-cognitive-load-optimises-learning (Managing cognitive load optimises learning | Australian Education Research Organisation)
+4. https://louisiana.edu/registrar/records/transfer-credit/will-my-credits-transfer (Will My Credits Transfer? | University of Louisiana at Lafayette)
+5. https://universitycollege.louisiana.edu/current-students/transfer-plan (Transfer Plan - University College - University of Louisiana at Lafayette)
+6. https://louisiana.edu/studentsuccess/transfer/transfer-faqs (Transfer FAQs - University of Louisiana at Lafayette)
+7. https://louisiana.edu/registrar/services-resources/faqs/registration-faqs (Registration FAQs | University of Louisiana at Lafayette)
+8. https://www.chepp.org/wp-content/uploads/2024/05/CHEPP_Cost-of-Todays-College-Credit_WHITE-PAPER-003-FINAL.pdf (The Costs of Today's College Credit Transfer System for Learners and the Mindsets and Practices That Reduce Them)
+9. https://louisiana.edu/orientation/students/transfer-student-orientation (Transfer Student Orientation | University of Louisiana at Lafayette)
+10. https://research.com/student-guides/transfer-guides/what-transfer-students-should-know-about-credit-loss (2026 What Transfer Students Should Know About Credit Loss - Research.com)
+11. https://louisiana.edu/orientation/students/transfer-student-orientation (Transfer Student Orientation | University of Louisiana at Lafayette)

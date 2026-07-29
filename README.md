@@ -8,6 +8,15 @@ Athena is exploring a student-centered decision-clarity product for higher educa
 
 The portal combines the current readout, decision trail, four customer paths, smallest useful test, evidence register, source library, and a locally saved founder decision brief.
 
+## Test A
+
+**Facilitated prototype:** <https://henrytylerhebert-eng.github.io/athena-business-testing/test-a/>
+
+Test A turns the UL Lafayette transfer-advising route into a synthetic tester experience and facilitator signal dashboard. It captures pseudonymous, local-only session records and does not connect to institutional systems.
+
+- [Product brief](products/test-a/PRODUCT_BRIEF.md)
+- [Signal dictionary](products/test-a/SIGNAL_DICTIONARY.md)
+
 ## Current business question
 
 Which first learning loop best preserves Athena's student-empowerment thesis while producing credible evidence quickly?
@@ -27,6 +36,8 @@ These are hypotheses to compare, not settled market decisions.
 | --- | --- |
 | `index.html` | Standalone Athena research and decision portal |
 | `athena_package/` | Canonical research package and original source reports |
+| `test-a/` | Route A tester flow and facilitator dashboard |
+| `products/test-a/` | Product brief and signal contract |
 | `experiments/` | Business-test ledger and reusable experiment template |
 | `decisions/` | Durable founder-decision template |
 | `evidence/` | Evidence-handling rules |

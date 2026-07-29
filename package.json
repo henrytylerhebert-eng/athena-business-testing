@@ -4,6 +4,6 @@
   "private": true,
   "description": "Athena research portal and business-testing workspace",
   "scripts": {
-    "test": "node scripts/validate-site.mjs"
+    "test": "node scripts/validate-site.mjs && node scripts/validate-test-a.mjs"
   }
 }

@@ -33,6 +33,8 @@ jobs:
           mkdir -p _site
           cp index.html .nojekyll _site/
           cp -R athena_package _site/
+          cp -R test-a _site/
+          cp -R products _site/
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5

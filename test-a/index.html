@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Athena Test A facilitated transfer-advising prototype and signal dashboard.">
+  <title>Athena Test A</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../" aria-label="Return to Athena research workspace">
+      <span class="brand-mark" aria-hidden="true">A</span>
+      <span><b>Athena</b><small>Test A · Transfer advising</small></span>
+    </a>
+    <div class="topbar-actions">
+      <span class="environment"><i></i>Synthetic · local only</span>
+      <a href="../">Research portal</a>
+      <a href="../products/test-a/PRODUCT_BRIEF.md" target="_blank">Product brief</a>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1">
+    <section class="loading-state" aria-live="polite">
+      <span class="loader"></span>
+      <p>Preparing Test A…</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><b>Athena Test A</b> is a synthetic research prototype. It is not UL Lafayette academic advice, an institutional system, or an approved human-subject research environment.</p>
+    <p>Session data stays in this browser unless explicitly exported.</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="app.mjs"></script>
+</body>
+</html>

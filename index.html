@@ -444,6 +444,7 @@
     .option-facts div { padding-top: 10px; border-top: 1px solid var(--line); }
     .option-facts span { display: block; color: #819097; font-size: 9px; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
     .option-facts strong { display: block; margin-top: 4px; font-size: 11px; line-height: 1.35; }
+    .option-actions { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
     .route-button { position: relative; z-index: 1; align-self: flex-start; }
     .route-button[aria-pressed="true"] { color: #fff; background: var(--teal); border-color: var(--teal); }
     .selection-bar {
@@ -900,7 +901,10 @@
                 <div><span>Why consider</span><strong>Clearest evidence chain and measurable outcomes</strong></div>
                 <div><span>Primary risk</span><strong>Institutional access, governance, and speed</strong></div>
               </div>
-              <button class="button light small route-button" type="button" data-route="A" aria-pressed="false">Mark as working route</button>
+              <div class="option-actions">
+                <a class="button small test-button" href="test-a/">Start Test A</a>
+                <button class="button light small route-button" type="button" data-route="A" aria-pressed="false">Mark as working route</button>
+              </div>
             </article>
             <article class="panel option" data-route-card="B" data-search="community college pathway bridge prospective transferring students">
               <div class="option-top"><span class="option-letter">B</span><span class="status unverified">Under-researched</span></div>
@@ -1127,6 +1131,9 @@
       if (parentFolder === "athena_package") {
         document.querySelectorAll('a[href^="athena_package/"]').forEach(link => {
           link.setAttribute("href", link.getAttribute("href").replace(/^athena_package\//, ""));
+        });
+        document.querySelectorAll('a[href^="test-a/"]').forEach(link => {
+          link.setAttribute("href", "../" + link.getAttribute("href"));
         });
       }
       const routeNames = {
